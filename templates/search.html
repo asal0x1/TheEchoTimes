@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    {% load static %}
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Echo News — Search results for {{ query }}" />
+  <title>
+    {% if query %}"{{ query }}" — Search{% else %}Search{% endif %} · Echo News
+  </title>
+  <link rel="stylesheet" href="{% static 'assets/css/search.css' %}" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="/" class="logo-mark">
+      <div class="logo-icon">E</div>
+      <span class="logo-name">Echo</span>
+    </a>
+
+    <!-- Inline search (secondary) -->
+
+
+    <!-- Nav right -->
+    <nav class="nav-right">
+      <a href="{% url 'home' %}" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Topics</a>
+      {% if user.is_authenticated %}
+        <a href="#" class="nav-link">{{ user.username }}</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="nav-link">Sign in</a>
+        <a href="{% url 'register' %}">
+          <button class="btn-nav">Get started</button>
+        </a>
+      {% endif %}
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════
+     SEARCH HERO
+════════════════════════════════════════════ -->
+<section class="search-hero">
+  <div class="search-hero-inner">
+
+    <p class="search-hero-label">Search results</p>
+
+    <h1 class="search-hero-title">
+      {% if query %}
+        Results for <span class="query-highlight">"{{ query }}"</span>
+      {% else %}
+        Search Echo News
+      {% endif %}
+    </h1>
+
+    {% if query %}
+      <p class="search-hero-count">
+        <strong>{{ result_count|default:"0" }}</strong>
+        article{% if result_count != 1 %}s{% endif %} found
+        {% if selected_category and selected_category != 'all' %}
+          in <strong>{{ selected_category|title }}</strong>
+        {% endif %}
+      </p>
+    {% endif %}
+
+    <!-- Hero Search Form -->
+    <form method="GET" action="{% url 'search' %}">
+      <div class="hero-search-bar" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          class="hero-search-input"
+          type="search"
+          name="q"
+          value="{{ query|default:'' }}"
+          placeholder="Search for news, topics, authors…"
+          autocomplete="off"
+          autofocus
+          aria-label="Search"
+        />
+        {% if selected_category and selected_category != 'all' %}
+          <input type="hidden" name="category" value="{{ selected_category }}" />
+        {% endif %}
+        <button class="hero-search-btn" type="submit">
+          <span>Search</span>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FILTER BAR
+════════════════════════════════════════════ -->
+<!--<div class="filter-bar" role="navigation" aria-label="Filter results">-->
+<!--  <div class="filter-bar-inner">-->
+
+<!--    &lt;!&ndash; Category Tabs &ndash;&gt;-->
+<!--    <div class="filter-tabs" role="tablist">-->
+<!--      <button-->
+<!--        class="filter-tab {% if not selected_category or selected_category == 'all' %}active{% endif %}"-->
+<!--        data-category="all"-->
+<!--        role="tab"-->
+<!--        aria-selected="{% if not selected_category or selected_category == 'all' %}true{% else %}false{% endif %}"-->
+<!--      >-->
+<!--        All-->
+<!--        <span class="tab-count">{{ result_count|default:"0" }}</span>-->
+<!--      </button>-->
+
+<!--      {% for cat in categories %}-->
+<!--        <button-->
+<!--          class="filter-tab {% if selected_category == cat.slug %}active{% endif %}"-->
+<!--          data-category="{{ cat.slug }}"-->
+<!--          role="tab"-->
+<!--          aria-selected="{% if selected_category == cat.slug %}true{% else %}false{% endif %}"-->
+<!--        >-->
+<!--          {{ cat.name }}-->
+<!--          <span class="tab-count">{{ cat.count }}</span>-->
+<!--        </button>-->
+<!--      {% empty %}-->
+<!--        &lt;!&ndash; Default static categories if context not provided &ndash;&gt;-->
+<!--        <button class="filter-tab" data-category="world">World <span class="tab-count">0</span></button>-->
+<!--        <button class="filter-tab" data-category="politics">Politics <span class="tab-count">0</span></button>-->
+<!--        <button class="filter-tab" data-category="tech">Tech <span class="tab-count">0</span></button>-->
+<!--        <button class="filter-tab" data-category="business">Business <span class="tab-count">0</span></button>-->
+<!--        <button class="filter-tab" data-category="science">Science <span class="tab-count">0</span></button>-->
+<!--        <button class="filter-tab" data-category="sport">Sport <span class="tab-count">0</span></button>-->
+<!--      {% endfor %}-->
+<!--    </div>-->
+
+<!--    <div class="filter-sep" aria-hidden="true"></div>-->
+
+<!--    &lt;!&ndash; Sort & Filter Controls &ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="filter-controls">&ndash;&gt;-->
+<!--&lt;!&ndash;      <select id="sortSelect" class="filter-select" aria-label="Sort results">&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="relevance" {% if sort == 'relevance' %}selected{% endif %}>Relevance</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="newest"    {% if sort == 'newest' %}selected{% endif %}>Newest first</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="oldest"    {% if sort == 'oldest' %}selected{% endif %}>Oldest first</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="popular"   {% if sort == 'popular' %}selected{% endif %}>Most read</option>&ndash;&gt;-->
+<!--&lt;!&ndash;      </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <button&ndash;&gt;-->
+<!--&lt;!&ndash;        id="filterToggle"&ndash;&gt;-->
+<!--&lt;!&ndash;        class="btn-filter-toggle"&ndash;&gt;-->
+<!--&lt;!&ndash;        aria-expanded="false"&ndash;&gt;-->
+<!--&lt;!&ndash;        aria-controls="advancedFilters"&ndash;&gt;-->
+<!--&lt;!&ndash;      >&ndash;&gt;-->
+<!--&lt;!&ndash;        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"&ndash;&gt;-->
+<!--&lt;!&ndash;             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">&ndash;&gt;-->
+<!--&lt;!&ndash;          <line x1="4" y1="6" x2="20" y2="6"/>&ndash;&gt;-->
+<!--&lt;!&ndash;          <line x1="8" y1="12" x2="16" y2="12"/>&ndash;&gt;-->
+<!--&lt;!&ndash;          <line x1="11" y1="18" x2="13" y2="18"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;        <span>Filters</span>&ndash;&gt;-->
+<!--&lt;!&ndash;      </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!-- Advanced Filter Panel -->
+<div id="advancedFilters" class="advanced-filters" role="region" aria-label="Advanced filters">
+  <form class="adv-inner" method="GET" action="{% url 'search' %}">
+    <input type="hidden" name="q" value="{{ query|default:'' }}" />
+
+    <div class="adv-group">
+      <label for="date_from">From date</label>
+      <input
+        type="date"
+        id="date_from"
+        name="date_from"
+        value="{{ date_from|default:'' }}"
+      />
+    </div>
+
+    <div class="adv-group">
+      <label for="date_to">To date</label>
+      <input
+        type="date"
+        id="date_to"
+        name="date_to"
+        value="{{ date_to|default:'' }}"
+      />
+    </div>
+
+    <div class="adv-group">
+      <label for="source_filter">Source</label>
+      <select id="source_filter" name="source">
+        <option value="">All sources</option>
+        {% for source in sources %}
+          <option value="{{ source.slug }}"
+            {% if selected_source == source.slug %}selected{% endif %}>
+            {{ source.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+<!--    <div class="adv-group">-->
+<!--      <label for="lang_filter">Language</label>-->
+<!--      <select id="lang_filter" name="lang">-->
+<!--        <option value="">All languages</option>-->
+<!--        <option value="en" {% if selected_lang == 'en' %}selected{% endif %}>English</option>-->
+<!--        <option value="uz" {% if selected_lang == 'uz' %}selected{% endif %}>Uzbek</option>-->
+<!--        <option value="ru" {% if selected_lang == 'ru' %}selected{% endif %}>Russian</option>-->
+<!--      </select>-->
+<!--    </div>-->
+
+    <button type="submit" class="btn-nav" style="height:38px;padding:0 18px;font-size:13px;">
+      Apply
+    </button>
+    <button type="button" id="resetFilters" class="btn-adv-reset">Reset</button>
+  </form>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE BODY
+════════════════════════════════════════════ -->
+<div class="page-body">
+
+  <!-- ── RESULTS ── -->
+  <main class="results-section" role="main">
+
+    <!-- Trending tags -->
+    <div class="trending-tags" aria-label="Popular search tags">
+      <span class="trending-label">Trending:</span>
+      {% for tag in tags %}
+        <button class="tag {% if tag.name == q %}active{% endif %}"
+                data-tag="{{ tag.name }}">
+          {{ tag.name }}
+        </button>
+      {% empty %}
+        {% for catg in category %}
+        <a class="tag" href="{% url 'category' catg.slug %}" data-tag="{{ catg.name }}">{{ catg.name }}</a>
+
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <!-- Results list -->
+    {% if q %}
+
+      <div class="results-list" role="feed" aria-label="Search results">
+        {% for new in news %}
+
+          <!-- Featured card (first result) -->
+          {% if forloop.first %}
+            <article class="article-card featured" aria-label="{{ new.title }}">
+                <div class="article-body">
+
+                    <div class="article-meta">
+                        <span class="article-category">{{ new.category }}</span>
+
+                        <span class="article-source">
+                            {{ new.source|default:"Echo News" }}
+                        </span>
+
+                        <span class="article-dot"></span>
+
+                        <time class="article-time">
+                            {{ new.date }}
+                        </time>
+                    </div>
+
+                    <h2 class="article-title">
+                        <a href="{% url 'about' new.id %}">
+                            {{ new.title }}
+                        </a>
+                    </h2>
+
+                    <p class="article-excerpt">
+                        {{ new.short_description }}
+                    </p>
+
+                </div>
+
+                <div class="article-thumb">
+                    {% if new.main_image %}
+                        <img src="{{ new.main_image.url }}" alt="{{ new.title }}">
+                    {% endif %}
+                </div>
+            </article>
+
+          {% else %}
+          <!-- Standard card -->
+            <article class="article-card" aria-label="{{ new.title }}">
+              <div class="article-body">
+                <div class="article-meta">
+                  <span class="article-category">{{ new.category.name|upper }}</span>
+                  <span class="article-source">{{ new.source|default:"Echo News" }}</span>
+                  <span class="article-dot" aria-hidden="true"></span>
+                  <time class="article-time" datetime="{{ new.published_at|date:'c' }}">
+                    {{ new.published_at|timesince }} ago
+                  </time>
+                </div>
+
+                <h2 class="article-title">
+                  <a href="{% url 'about' new.id %}">{{ new.title }}</a>
+                </h2>
+
+                <p class="article-excerpt">{{ new.excerpt|default:new|truncatewords:20 }}</p>
+
+                <div class="article-footer">
+                  <div class="article-author">
+                    <div class="author-avatar">{{ new.author.username|first|upper }}</div>
+                    {{ new.author_name }}
+                  </div>
+                  <span class="article-read-time">{{ new.read_time|default:"3" }} min read</span>
+                  <button
+                    class="article-bookmark"
+                    aria-label="Bookmark article"
+                    title="Save article"
+                    data-article-id="{{ new.pk }}"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="article-thumb">
+                {% if new.main_image %}
+                  <img src="{{ new.main_image.url }}" alt="{{ new.title }}" loading="lazy" />
+                {% else %}
+                  <div class="thumb-placeholder" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                  </div>
+                {% endif %}
+              </div>
+            </article>
+          {% endif %}
+
+        {% endfor %}
+      </div><!-- /.results-list -->
+
+      <!-- Pagination -->
+      {% if page_obj.has_other_pages %}
+        <nav class="pagination" aria-label="Result pages">
+          <!-- Previous -->
+          <button
+            class="page-btn {% if not page_obj.has_previous %}disabled{% endif %}"
+            onclick="{% if page_obj.has_previous %}window.location.href='?q={{ query }}&page={{ page_obj.previous_page_number }}'{% endif %}"
+            aria-label="Previous page"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+              <button class="page-btn active" aria-current="page">{{ num }}</button>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+              <button class="page-btn"
+                onclick="window.location.href='?q={{ query }}&page={{ num }}'">
+                {{ num }}
+              </button>
+            {% endif %}
+          {% endfor %}
+
+          <!-- Next -->
+          <button
+            class="page-btn {% if not page_obj.has_next %}disabled{% endif %}"
+            onclick="{% if page_obj.has_next %}window.location.href='?q={{ query }}&page={{ page_obj.next_page_number }}'{% endif %}"
+            aria-label="Next page"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </nav>
+      {% endif %}
+
+    {% else %}
+
+      <!-- No Results State -->
+      <div class="no-results">
+        <div class="no-results-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+
+        {% if query %}
+          <h3>No results for "{{ query }}"</h3>
+          <p>
+            We couldn't find any articles matching your search.
+            Try different keywords or browse our trending topics below.
+          </p>
+        {% else %}
+          <h3>Start your search</h3>
+          <p>
+            Type a keyword, topic, or author name above to discover
+            the latest stories from Echo News.
+          </p>
+        {% endif %}
+
+        <div class="no-results-suggestions">
+          <button class="tag" data-tag="Artificial Intelligence">Artificial Intelligence</button>
+          <button class="tag" data-tag="Climate">Climate</button>
+          <button class="tag" data-tag="Technology">Technology</button>
+          <button class="tag" data-tag="Business">Business</button>
+          <button class="tag" data-tag="Science">Science</button>
+        </div>
+      </div>
+
+    {% endif %}
+
+  </main><!-- /.results-section -->
+
+
+  <!-- ── SIDEBAR ── -->
+
+
+</div><!-- /.page-body -->
+
+<script src="{% static 'assets/js/search.js' %}" defer></script>
+</body>
+</html>
