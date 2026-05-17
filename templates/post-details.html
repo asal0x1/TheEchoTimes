@@ -564,62 +564,41 @@
                                     </div>
                                     <div class="echo-popular-item">
                                         <ul class="list-unstyled">
+                                            {% for c in category %}
                                             <li>
-                                                <h5>Fashion & Life Style</h5>
+                                                <h5>{{ c.name }}</h5>
                                             </li>
-                                            <li>
-                                                <h5>Relationship</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Art & Culture</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Self Development</h5>
-                                            </li>
-                                            <li>
-                                                <h5>travel & tourism</h5>
-                                            </li>
+                                            {% endfor %}
+<!--                                            <li>-->
+<!--                                                <h5>Relationship</h5>-->
+<!--                                            </li>-->
+<!--                                            <li>-->
+<!--                                                <h5>Art & Culture</h5>-->
+<!--                                            </li>-->
+<!--                                            <li>-->
+<!--                                                <h5>Self Development</h5>-->
+<!--                                            </li>-->
+<!--                                            <li>-->
+<!--                                                <h5>travel & tourism</h5>-->
+<!--                                            </li>-->
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="echo-home-1-hero-area-top-story">
                                     <h5 class="text-center">Top Story</h5>
+                                    {% for ms in most_seen|slice:":4" %}
+                                    {% if ms != post %}
                                     <div class="echo-top-story">
                                         <div class="echo-story-picture img-transition-scale">
-                                            <a href="post-details.html"><img src="{% static 'assets/images/category-style-1/item-9.html" alt="Echo" class="img-hover"></a>
+                                            <a href="{% url 'about' ms.id %}"><img src="{{ ms.main_image.url }}" alt="Echo" class="img-hover"></a>
                                         </div>
                                         <div class="echo-story-text">
-                                            <h6><a href="#" class="title-hover">14 Tight Samurai Games You...</a></h6>
-                                            <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> 06 minute read</a>
+                                            <h6><a href="{% url 'about' ms.id %}" class="title-hover">{{ ms.title }}</a></h6>
+                                            <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> {{ ms.date }}</a>
                                         </div>
                                     </div>
-                                    <div class="echo-top-story">
-                                        <div class="echo-story-picture img-transition-scale">
-                                            <a href="post-details.html"><img src="{% static 'assets/images/category-style-1/item-6.html" alt="Echo" class="img-hover"></a>
-                                        </div>
-                                        <div class="echo-story-text">
-                                            <h6><a href="#" class="title-hover">The Google Pixel Fold looks...</a></h6>
-                                            <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> 06 minute read</a>
-                                        </div>
-                                    </div>
-                                    <div class="echo-top-story">
-                                        <div class="echo-story-picture img-transition-scale">
-                                            <a href="post-details.html"><img src="{% static 'assets/images/category-style-1/item-7.html" alt="Echo" class="img-hover"></a>
-                                        </div>
-                                        <div class="echo-story-text">
-                                            <h6><a href="#" class="title-hover">ChatGPT returns to Italy after ban</a></h6>
-                                            <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> 06 minute read</a>
-                                        </div>
-                                    </div>
-                                    <div class="echo-top-story">
-                                        <div class="echo-story-picture img-transition-scale">
-                                            <a href="post-details.html"><img src="{% static 'assets/images/category-style-1/item-8.html" alt="Echo" class="img-hover"></a>
-                                        </div>
-                                        <div class="echo-story-text">
-                                            <h6><a href="#" class="title-hover">Avatar: The Way Of Water - how...</a></h6>
-                                            <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> 06 minute read</a>
-                                        </div>
-                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
                                 </div>
                                 <div class="echo-feature-area-right-site-follower">
                                     <div class="echo-home-2-title">
