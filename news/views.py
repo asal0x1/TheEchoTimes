@@ -34,6 +34,11 @@ def home(request):
     return render(request, 'index.html', ctx)
 
 def about(request, pk):
+    news = News.objects.all()
+
+    category = Category.objects.all()
+    most_seen = news.order_by('-views')
+
     about_post = get_object_or_404(News, pk=pk)
     comments = about_post.comments.filter(is_approved=True)
     if request.method == 'POST':
@@ -55,6 +60,8 @@ def about(request, pk):
     ctx = { 'post': about_post,
             'comments': comments,
             'form': form,
+            'category': category,
+            'most_seen': most_seen,
     }
     return render(request, 'post-details.html', ctx)
 
@@ -139,15 +146,21 @@ def foods(request):
 
 def gaming(request):
     gaming = News.objects.filter(category__name='Gaming').order_by('-id')
+
     last_gaming = gaming.order_by('-id').first()
+    comments = last_gaming.comments.filter(is_approved=True)
+
     most_seen = gaming.order_by('-views')
-    g_tags = Category.objects.filter(news__category__name='Gaming').distinct()
+    g_tags = News.objects.filter(tags__name='Game Guides').distinct()
+
+
 
     ctx = {
         'gaming': gaming,
         'last_gaming': last_gaming,
         'most_seen': most_seen,
-        'g_tags': g_tags
+        'g_tags': g_tags,
+        'comments': comments
     }
     return render(request, 'gaming.html', ctx)
 
