@@ -114,31 +114,20 @@
                         <div class="col-xl-2 col-lg-2 col-md-7 col-sm-7 col-7">
                             <div class="echo-site-logo">
                                 <a href="index.html">
-                                    <img src="{% static 'assets/images/home-1/site-logo/site-logo4.html" alt="Echo">
-                                </a>
+                                    <a class="logo-light" href="index.html"><img src="{% static 'assets/images/home-1/site-logo/site-logo.svg' %}" alt="Echo"></a>
+                                    <a class="logo-dark" href="index.html"><img src="{% static 'assets/images/home-1/site-logo/site-logo-dark.svg' %}" alt="Echo"></a>                                </a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 d-none d-lg-block">
                             <nav>
                                 <div class="echo-home-1-menu">
                                     <ul class="list-unstyled echo-desktop-menu">
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element active">Home</a>
+
+                                            <a href="{% url 'home' %}" class="echo-dropdown-main-element active">Home</a>
                                             <!-- Start Dropdown Menu -->
-                                            <ul class="echo-submenu list-unstyled menu-home">
-                                                <li class="nav-item"><a href="index.html">Home 01 - Main</a></li>
-                                                <li class="nav-item"><a href="fashion.html">Home 02 - Fashion</a></li>
-                                                <li class="nav-item"><a href="technology.html">Home 03 - Technology</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="gaming.html">Home 04 - Gamming</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="sports.html">Home 05 - Sports</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="travel.html">Home 06 - Travel</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="AI.html">Home 07 - AI</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="politics.html">Home 08 - Politics</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="food.html">Home 09 - Food</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="index-ten.html">Home 10 - Photography</a></li>
-                                            </ul>
+
                                             <!-- End Dropdown Menu -->
-                                        </li>
+
                                         <li class="menu-item echo-has-dropdown">
                                             <a href="#" class="echo-dropdown-main-element">Pages</a>
                                             <ul class="echo-submenu list-unstyled menu-pages">
@@ -149,68 +138,16 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Category</a>
+                                            <a href="{% url 'category_view' %}" class="echo-dropdown-main-element">Category</a>
                                             <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="category-style-1.html">Category Style 1</a></li>
-                                                <li class="nav-item"><a href="category-style-2.html">Category Style 2</a></li>
-                                                <li class="nav-item"><a href="category.html">Category Style 3</a></li>
+                                                <li class="nav-item"><a href="{% url 'technology' %}">Technology</a></li>
+                                                <li class="nav-item"><a href="{% url 'sports' %}">Sports</a></li>
+                                                <li class="nav-item"><a href="{% url 'politics' %}">Politics</a></li>
+                                                <li class="nav-item"><a href="{% url 'fashion' %}">Fashion</a></li>
+                                                <li class="nav-item"><a href="{% url 'gaming' %}">Gaming</a></li>
+                                                <li class="nav-item"><a href="{% url 'foods' %}">Food</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">News</a>
-                                            <ul class="mega-menu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="post-style-1.html">
-                                                        <div class="mega-menu-item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-1.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Xi, Putin hail 'new era'....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-style-2.html">
-                                                        <div class="mega-menu-item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-2.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Elon Musk's global empire....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-style-3.html">
-                                                        <div class="mega-menu item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-3.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Sri Lanka to receive first ....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-details.html">
-                                                        <div class="mega-menu item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-4.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Turkey earthquake prepare....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Post</a>
-                                            <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="post-style-1.html">Post Style 1</a></li>
-                                                <li class="nav-item"><a href="post-style-2.html">Post Style 2</a></li>
-                                                <li class="nav-item"><a href="post-style-3.html">Post Style 3</a></li>
-                                                <li class="nav-item"><a href="post-details.html">Post Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="contact.html" class="echo-dropdown-main-element">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -422,20 +359,22 @@
                         <div class="col-xl-8 col-lg-8">
                             <div class="echo-latest-news-main-content">
                                 <div class="echo-latest-news-img img-transition-scale">
-                                    <a href="post-details.html">
-                                        <img src="{% static 'assets/images/home-1/hero/banner-right.html" alt="Echo" class="img-hover">
+                                    <a href="{% url 'about' last_gaming.id%}">
+                                        <img src="{{ last_gaming.main_image.url }}" alt="Echo" class="img-hover">
                                     </a>
-                                    <span class="content-catagory-tag">Gaming</span>
+                                    {% for t in last_gaming.tags.all|slice:":1" %}
+                                    <span class="content-catagory-tag">{{ t }}</span>
+                                    {% endfor %}
                                 </div>
                                 <div class="content">
 
                                     <div class="echo-latest-news-single-title">
-                                        <h5><a href="post-details.html" class="text-capitalize title-hover">PlayStation Stars Campaigns and Digital Collectibles 23</a></h5>
+                                        <h5><a href="{% url 'about' last_gaming.id%}" class="text-capitalize title-hover">{{ last_gaming.title }}</a></h5>
                                     </div>
                                     <div class="echo-latest-news-time-views">
-                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                        <a href="#" class="pe-none"><i class="fa-solid fa-pen-swirl"></i> John Snow</a>
+                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>{{ last_gaming.date }}</a>
+                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> {{ last_gaming.comments.count }}</a>
+                                        <a href="#" class="pe-none"><i class="fa-solid fa-pen-swirl"></i> {{ last_gaming.author_name }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -443,58 +382,21 @@
                         <div class="col-xl-4 col-lg-4">
                             <div class="echo-banner-right-area-content">
                                 <ul>
+                                    {% for ms in most_seen|slice:":4" %}
                                     <li>
                                         <div class="content">
                                             <h5 class="title">
-                                                <a href="post-details.html" class="text-capitalize title-hover">Jump into Wayfinder 23</a>
+                                                <a href="{% url 'about' ms.id %}" class="text-capitalize title-hover">{{ ms.title }}</a>
                                             </h5>
-                                            <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
+                                            <p class="desc"><i class="fa-solid fa-calendar"></i>{{ ms.date }}</p>
                                         </div>
                                         <div class="echo-latest-news-img img-transition-scale">
-                                            <a href="post-details.html">
-                                                <img src="{% static 'assets/images/home-1/trending-right/item-7.html" alt="">
+                                            <a href="{% url 'about' ms.id %}">
+                                                <img src="{{ ms.main_image.url }}" alt="">
                                             </a>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="content">
-                                            <h5 class="title">
-                                                <a href="post-details.html" class="text-capitalize title-hover">Best Healers in Honkai Star Rail</a>
-                                            </h5>
-                                            <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                        </div>
-                                        <div class="echo-latest-news-img img-transition-scale">
-                                            <a href="post-details.html">
-                                                <img src="{% static 'assets/images/home-1/trending-right/item-8.html" alt="">
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="content">
-                                            <h5 class="title">
-                                                <a href="post-details.html" class="text-capitalize title-hover">Best PS5 Settings for Jedi Survivor</a>
-                                            </h5>
-                                            <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                        </div>
-                                        <div class="echo-latest-news-img img-transition-scale">
-                                            <a href="post-details.html">
-                                                <img src="{% static 'assets/images/home-1/trending-right/item-9.html" alt="">
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="content">
-                                            <h5 class="title">
-                                                <a href="post-details.html" class="text-capitalize title-hover">When is My Hero Academia Season</a>
-                                            </h5>
-                                            <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                        </div>
-                                        <div class="echo-latest-news-img img-transition-scale">
-                                            <a href="post-details.html">
-                                                <img src="{% static 'assets/images/home-1/trending-right/item-10.html" alt="">
-                                            </a>
-                                        </div>
-                                    </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -510,70 +412,32 @@
         <div class="echo-latest-news-content">
             <div class="container">
                 <div class="title-area">
-                    <h6 class="sub-title"><img src="{% static 'assets/images/icon/01.html" alt="icon"> Trending Now</h6>
+                    <h6> Trending Now</h6>
                     <a href="post-details.html" class="rts-btn see-all-btn">See All <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="echo-latest-news-full-content">
                     <div class="row">
+                        {% for g in gaming %}
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="echo-latest-news-main-content">
                                 <div class="echo-latest-news-img img-transition-scale">
-                                    <a href="post-details.html">
-                                        <img src="{% static 'assets/images/home-1/latest-news/item-8.html" alt="Echo" class="img-hover">
+                                    <a href="{% url 'about' g.id %}">
+                                        <img src="{{ g.main_image.url }}" alt="Echo" class="img-hover">
                                     </a>
-                                    <span class="content-catagory-tag">Game Guides</span>
+                                    {% for t in g.tags.all %}
+                                    <span class="content-catagory-tag">{{ t }}</span>
+                                    {% endfor %}
                                 </div>
                                 <div class="echo-latest-news-single-title">
-                                    <h5><a href="post-details.html" class="text-capitalize title-hover">Vampire Survivors Is Getting An Animated Series</a></h5>
+                                    <h5><a href="{% url 'about' g.id %}" class="text-capitalize title-hover">{{ g.title }}</a></h5>
                                 </div>
                                 <div class="echo-latest-news-time-views">
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
+                                    <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>{{ g.date }}</a>
+                                    <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i>{{ g.comments.count }}</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="echo-latest-news-main-content mid">
-                                <div class="echo-latest-news-img img-transition-scale">
-                                    <a href="post-details.html">
-                                        <img src="{% static 'assets/images/home-1/latest-news/item-9.html" alt="Echo" class="img-hover">
-                                    </a>
-                                    <span class="content-catagory-tag">Video Podcast</span>
-                                    <div class="vedio-icone">
-                                        <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=CXLM08fZO5o">
-                                            <span></span>
-                                        </a>
-                                        <div class="video-overlay">
-                                            <a class="video-overlay-close">×</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="echo-latest-news-single-title">
-                                    <h5><a href="post-details.html" class="text-capitalize title-hover">Tears Of The Kingdom Hands-On And Jedi Survivor Review</a></h5>
-                                </div>
-                                <div class="echo-latest-news-time-views">
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="echo-latest-news-main-content">
-                                <div class="echo-latest-news-img img-transition-scale">
-                                    <a href="post-details.html">
-                                        <img src="{% static 'assets/images/home-1/latest-news/item-10.html" alt="Echo" class="img-hover">
-                                    </a>
-                                    <span class="content-catagory-tag">Review</span>
-                                </div>
-                                <div class="echo-latest-news-single-title">
-                                    <h5><a href="post-details.html" class="text-capitalize title-hover">Star Wars Jedi: <br> Survivor Review</a></h5>
-                                </div>
-                                <div class="echo-latest-news-time-views">
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                    <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
 
                 </div>
@@ -583,405 +447,15 @@
     <!-- End Latest News -->
 
     <!-- Start Feature Area -->
-    <section class="echo-feature-area home-four">
-        <div class="echo-feature-area-content">
-            <div class="container">
-                <div class="echo-feature-area-full-content">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="title-area">
-                                        <h6 class="sub-title"><img src="{% static 'assets/images/icon/02.html" alt="icon"> Features</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="echo-banner-right-area-content">
-                                        <ul>
-                                            <li>
-                                                <div class="echo-latest-news-img img-transition-scale">
-                                                    <a href="post-details.html">
-                                                        <img src="{% static 'assets/images/home-1/trending-right/item-11.html" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="title">
-                                                        <a href="post-details.html" class="text-capitalize title-hover">Age of Wonders 4 Platform:</a>
-                                                    </h5>
-                                                    <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="echo-latest-news-img img-transition-scale">
-                                                    <a href="post-details.html">
-                                                        <img src="{% static 'assets/images/home-1/trending-right/item-12.html" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="title">
-                                                        <a href="post-details.html" class="text-capitalize title-hover">Super Dungeon Maker Platform</a>
-                                                    </h5>
-                                                    <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="echo-latest-news-img img-transition-scale">
-                                                    <a href="post-details.html">
-                                                        <img src="{% static 'assets/images/home-1/trending-right/item-13.html" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="title">
-                                                        <a href="post-details.html" class="text-capitalize title-hover">Ravenlok Platform:</a>
-                                                    </h5>
-                                                    <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="echo-latest-news-img img-transition-scale">
-                                                    <a href="post-details.html">
-                                                        <img src="{% static 'assets/images/home-1/trending-right/item-14.html" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="title">
-                                                        <a href="post-details.html" class="text-capitalize title-hover">Humanity | New Gameplay Today</a>
-                                                    </h5>
-                                                    <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="echo-latest-news-main-content">
-                                        <div class="echo-latest-news-img img-transition-scale">
-                                            <a href="post-details.html">
-                                                <img src="{% static 'assets/images/home-1/latest-news/item-11.html" alt="Echo" class="img-hover">
-                                            </a>
-                                            <span class="content-catagory-tag">Gaming</span>
-                                        </div>
-                                        <div class="echo-latest-news-single-title">
-                                            <h5><a href="post-details.html" class="text-capitalize title-hover">Vampire Survivors Is Getting An Animated Series</a></h5>
-                                        </div>
-                                        <div class="echo-latest-news-time-views">
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="title-area right">
-                                        <h6 class="sect-title">Follow Us</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="right-side-inner">
-                                        <div class="echo-feature-area-right-site-follower">
-                                            <ul class="list-unstyled">
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i>20K Fans</a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i>10K Followers</a></li>
-                                                <li><a href="#"><i class="fa-brands fa-instagram"></i>50K Followers</a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i>30K Followers</a></li>
-                                                <li><a href="#"><i class="fa-brands fa-pinterest"></i>30K Followers</a></li>
-                                                <li><a href="#"><i class="fa-brands fa-youtube"></i>04K Subscriber</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="echo-feature-ad-area">
-                                            <img src="{% static 'assets/images/home-1/cta/ad-2.html" alt="Ads">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- End Feature Area -->
 
     <!-- Start Popular Area -->
-    <section class="echo-popular-news-area home-four">
-        <div class="echo-popular-news-area-content">
-            <div class="container">
-                <div class="echo-popular-news-area-full-content">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="title-area">
-                                        <h6 class="sub-title"><img src="{% static 'assets/images/icon/03.html" alt="icon"> Editor's Pick</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="left-side-content">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <div class="echo-latest-news-main-content">
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/latest-news/item-12.html" alt="Echo" class="img-hover">
-                                                        </a>
-                                                        <span class="content-catagory-tag">Game Guides</span>
-                                                        <div class="vedio-icone">
-                                                            <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=ltnXFGa6244">
-                                                                <span></span>
-                                                            </a>
-                                                            <div class="video-overlay">
-                                                                <a class="video-overlay-close">×</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="echo-latest-news-single-title">
-                                                        <h5><a href="post-details.html" class="text-capitalize title-hover">Bungie Wins $12 Million In Destiny 2 Anti-Cheat Lawsuit</a></h5>
-                                                    </div>
-                                                    <div class="echo-latest-news-time-views">
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <div class="echo-latest-news-main-content">
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/latest-news/item-13.html" alt="Echo" class="img-hover">
-                                                        </a>
-                                                        <span class="content-catagory-tag">Gaming</span>
-                                                        <div class="vedio-icone">
-                                                            <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=ltnXFGa6244">
-                                                                <span></span>
-                                                            </a>
-                                                            <div class="video-overlay">
-                                                                <a class="video-overlay-close">×</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="echo-latest-news-single-title">
-                                                        <h5><a href="post-details.html" class="text-capitalize title-hover">Brigitte Shows Overwatch 2 Still Doesn’t Fully Get Body</a></h5>
-                                                    </div>
-                                                    <div class="echo-latest-news-time-views">
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <div class="echo-latest-news-main-content">
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/latest-news/item-14.html" alt="Echo" class="img-hover">
-                                                        </a>
-                                                        <span class="content-catagory-tag">Video Podcast</span>
-                                                        <div class="vedio-icone">
-                                                            <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=ltnXFGa6244">
-                                                                <span></span>
-                                                            </a>
-                                                            <div class="video-overlay">
-                                                                <a class="video-overlay-close">×</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="echo-latest-news-single-title">
-                                                        <h5><a href="post-details.html" class="text-capitalize title-hover">The 9 Worst Reasons We Haven’t Finished A Game</a></h5>
-                                                    </div>
-                                                    <div class="echo-latest-news-time-views">
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <div class="echo-latest-news-main-content">
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/latest-news/item-15.html" alt="Echo" class="img-hover">
-                                                        </a>
-                                                        <span class="content-catagory-tag">Review</span>
-                                                        <div class="vedio-icone">
-                                                            <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=ltnXFGa6244">
-                                                                <span></span>
-                                                            </a>
-                                                            <div class="video-overlay">
-                                                                <a class="video-overlay-close">×</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="echo-latest-news-single-title">
-                                                        <h5><a href="post-details.html" class="text-capitalize title-hover">Star Wars Jedi: Survivor: The Kotaku Review</a></h5>
-                                                    </div>
-                                                    <div class="echo-latest-news-time-views">
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                        <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="title-area">
-                                        <h6 class="sect-title">Most Popular</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="echo-banner-right-area-content">
-                                        <div class="right-side-news">
-                                            <ul>
-                                                <li>
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/trending-right/item-15.html" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="catagory-tag">Game Guides</span>
-                                                        <h5 class="title">
-                                                            <a href="post-details.html" class="text-capitalize title-hover">Can Players Unlock Na’el in Xenoblade</a>
-                                                        </h5>
-                                                        <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/trending-right/item-16.html" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="catagory-tag">Gaming</span>
-                                                        <h5 class="title">
-                                                            <a href="post-details.html" class="text-capitalize title-hover">Can You Pet the Dog in Honkai Star</a>
-                                                        </h5>
-                                                        <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="echo-latest-news-img img-transition-scale">
-                                                        <a href="post-details.html">
-                                                            <img src="{% static 'assets/images/home-1/trending-right/item-17.html" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="catagory-tag">Review</span>
-                                                        <h5 class="title">
-                                                            <a href="post-details.html" class="text-capitalize title-hover">Survivor voice actors & cast list</a>
-                                                        </h5>
-                                                        <p class="desc"><i class="fa-solid fa-calendar"></i>01 Jan 2023</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="right-side-gallery">
-                                            <h5 class="title">Gallery</h5>
-                                            <ul class="gallery-inner">
-                                                <li class="gallery-item"><img src="{% static 'assets/images/home-1/trending-right/item-18.html" alt=""></li>
-                                                <li class="gallery-item"><img src="{% static 'assets/images/home-1/trending-right/item-19.html" alt=""></li>
-                                                <li class="gallery-item"><img src="{% static 'assets/images/home-1/trending-right/item-20.html" alt=""></li>
-                                                <li class="gallery-item"><img src="{% static 'assets/images/home-1/trending-right/item-21.html" alt=""></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- End Popular Area -->
 
     <!-- Start Video Area-->
-    <section class="echo-video-area home-four">
-        <div class="echo-video-area-inner">
-            <div class="vedio-icone">
-                <a class="play-video popup-youtube video-play-button" href="https://www.youtube.com/watch?v=ltnXFGa6244">
-                    <span></span>
-                </a>
-                <div class="video-overlay">
-                    <a class="video-overlay-close">×</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slider-inner">
-                        <div class="container">
-                            <div class="echo-video-bottom-area">
-                                <div class="banner-bottom-inner">
-                                    <div class="content">
-                                        <span class="content-catagory-tag">Video Podcast</span>
-                                        <h5 class="title">
-                                            <a href="post-details.html" class="text-capitalize title-hover">Brigitte Shows Overwatch 2 Still Doesn’t Fully Get Body Diversity</a>
-                                        </h5>
-                                        <div class="echo-latest-news-time-views">
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-inner">
-                        <div class="container">
-                            <div class="echo-video-bottom-area">
-                                <div class="banner-bottom-inner">
-                                    <div class="content">
-                                        <span class="content-catagory-tag">Video Podcast</span>
-                                        <h5 class="title">
-                                            <a href="post-details.html" class="text-capitalize title-hover">Brigitte Shows Overwatch 2 Still Doesn’t Fully Get The Diversity</a>
-                                        </h5>
-                                        <div class="echo-latest-news-time-views">
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-inner">
-                        <div class="container">
-                            <div class="echo-video-bottom-area">
-                                <div class="banner-bottom-inner">
-                                    <div class="content">
-                                        <span class="content-catagory-tag">Video Podcast</span>
-                                        <h5 class="title">
-                                            <a href="post-details.html" class="text-capitalize title-hover">Brigitte Shows Overwatch 2 Still Doesn’t Fully Get This Diversity</a>
-                                        </h5>
-                                        <div class="echo-latest-news-time-views">
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                            <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-btn">
-                <div class="swiper-button-prev"><i class="fa-regular fa-angle-left"></i></div>
-                <div class="swiper-button-next"><i class="fa-regular fa-angle-right"></i></div>
-            </div>
-        </div>
-    </section>
+
     <!-- End Video Area -->
 
     <!-- Start Feature Area -->
@@ -994,58 +468,31 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="title-area">
-                                        <h6 class="sub-title"><img src="{% static 'assets/images/icon/04.html" alt="icon"> Tip's & Guides</h6>
+
+                                        <h6 class="sub-title"> Tip's & Guides</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="echo-feature-area-site-title">
                                         <div class="echo-feature-area-last-news">
                                             <div class="row gy-5">
+                                                {% for g in g_tags %}
                                                 <div class="col-xl-12">
                                                     <div class="echo-feature-area-last-content">
                                                         <div class="echo-feature-area-last-content-img img-transition-scale">
-                                                            <a href="post-details.html"> <img src="{% static 'assets/images/home-1/feature-left/item-8.html" alt="Echo" class="img-hover"></a>
+                                                            <a href="{% url 'about' g.id %}"> <img src="{{ g.main_image.url }}" alt="Echo" class="img-hover"></a>
                                                         </div>
                                                         <div class="echo-feature-area-last-content-text">
                                                             <span class="content-catagory-tag">Game Guides</span>
-                                                            <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">10 Critical Things To Know Before Playing...</a></h3>
+                                                            <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">{{ g.title }}</a></h3>
                                                             <div class="echo-latest-news-time-views">
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
+                                                                <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>{{ g.date }}</a>
+                                                                <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i>{{ g.comments.count }}</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-12">
-                                                    <div class="echo-feature-area-last-content">
-                                                        <div class="echo-feature-area-last-content-img img-transition-scale">
-                                                            <a href="post-details.html"> <img src="{% static 'assets/images/home-1/feature-left/item-9.html" alt="Echo" class="img-hover"></a>
-                                                        </div>
-                                                        <div class="echo-feature-area-last-content-text">
-                                                            <span class="content-catagory-tag">Game Guides</span>
-                                                            <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">9 Things We Wish We Knew Before Playing...</a></h3>
-                                                            <div class="echo-latest-news-time-views">
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <div class="echo-feature-area-last-content">
-                                                        <div class="echo-feature-area-last-content-img img-transition-scale">
-                                                            <a href="post-details.html"> <img src="{% static 'assets/images/home-1/feature-left/item-10.html" alt="Echo" class="img-hover"></a>
-                                                        </div>
-                                                        <div class="echo-feature-area-last-content-text">
-                                                            <span class="content-catagory-tag">Game Guides</span>
-                                                            <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">14 Tight Samurai Games You Should Play </a></h3>
-                                                            <div class="echo-latest-news-time-views">
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-calendar"></i>01 Jan 2023</a>
-                                                                <a href="#" class="pe-none"><i class="fa-solid fa-comment"></i> 05 Comments</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -1064,41 +511,45 @@
                                 <div class="col-lg-12">
                                     <div class="echo-feature-right-area">
                                         <div class="echo-feature-area-last-content">
+                                            {% for s in most_seen|slice:":1" %}
                                             <div class="echo-feature-area-last-content-text">
-                                                <span class="content-catagory-tag">PC Game</span>
-                                                <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Games Moving Away From Gacha</a></h3>
-                                                <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>
+                                                {% for t in s.tags.all %}
+                                                <span class="content-catagory-tag">{{ t }}</span>
+                                                {% endfor %}
+                                                <h3 class="text-capitalize"><a href="{% url 'about' s.id %}" class="title-hover">{{ s.title }}</a></h3>
+                                                <p class="desc"><i class="fa-solid fa-comment"></i>{{ s.comments.count }}</p>
                                             </div>
+                                            {% endfor %}
                                         </div>
-                                        <ul class="echo-right-side-small-content">
-                                            <li class="content-inner">
-                                                <div class="number">
-                                                    <h3>02</h3>
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Forspoken | A Square Enix open-world RPG...</a></h3>
-                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>
-                                                </div>
-                                            </li>
-                                            <li class="content-inner">
-                                                <div class="number">
-                                                    <h3>03</h3>
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Kerbal Space Program 2 | Your favorite...</a></h3>
-                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>
-                                                </div>
-                                            </li>
-                                            <li class="content-inner">
-                                                <div class="number">
-                                                    <h3>04</h3>
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Destiny 2: Lightfall | Destiny tries cyberpunk...</a></h3>
-                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+<!--                                        <ul class="echo-right-side-small-content">-->
+<!--                                            <li class="content-inner">-->
+<!--                                                <div class="number">-->
+<!--                                                    <h3>02</h3>-->
+<!--                                                </div>-->
+<!--                                                <div class="content">-->
+<!--                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Forspoken | A Square Enix open-world RPG...</a></h3>-->
+<!--                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li class="content-inner">-->
+<!--                                                <div class="number">-->
+<!--                                                    <h3>03</h3>-->
+<!--                                                </div>-->
+<!--                                                <div class="content">-->
+<!--                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Kerbal Space Program 2 | Your favorite...</a></h3>-->
+<!--                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li class="content-inner">-->
+<!--                                                <div class="number">-->
+<!--                                                    <h3>04</h3>-->
+<!--                                                </div>-->
+<!--                                                <div class="content">-->
+<!--                                                    <h3 class="text-capitalize"><a href="post-details.html" class="title-hover">Destiny 2: Lightfall | Destiny tries cyberpunk...</a></h3>-->
+<!--                                                    <p class="desc"><i class="fa-sharp fa-light fa-share-from-square"></i> 100+K Shares</p>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
                                     </div>
                                 </div>
                             </div>
@@ -1114,38 +565,7 @@
     <!-- End Feature Area -->
 
     <!-- Start Our Software Download -->
-    <section class="echo-software-download-area home-four">
-        <div class="container">
-            <div class="echo-software-download-full-content-bg">
-                <div class="echo-software-download-img-content">
-                    <img src="{% static 'assets/images/home-1/our-android-app-download/item-1.png' %}" alt="Echo">
-                </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="echo-software-download-full-content">
-                            <div class="echo-software-download-text-content">
-                                <div class="echo-software-download-title">
-                                    <h2 class="text-capitalize">Download our apps for<br> stay update</h2>
-                                </div>
-                                <div class="echo-software-download-sub-title">
-                                    <p>Easy to update latest news, aily podcast and <br> everything in your hand</p>
-                                </div>
-                                <div class="echo-software-download-place">
-                                    <a href="#" class="echo-py-hover-white"> <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M16.4877 7.75092C16.3667 7.84543 14.2305 9.05726 14.2305 11.7518C14.2305 14.8685 16.9487 15.9711 17.0301 15.9984C17.0176 16.0657 16.5983 17.5085 15.5969 18.9786C14.7041 20.2724 13.7716 21.564 12.353 21.564C10.9344 21.564 10.5693 20.7344 8.93172 20.7344C7.33583 20.7344 6.7684 21.5913 5.47083 21.5913C4.17325 21.5913 3.26787 20.3942 2.22689 18.924C1.0211 17.1977 0.046875 14.5157 0.046875 11.9702C0.046875 7.88744 2.68375 5.72212 5.2789 5.72212C6.65784 5.72212 7.8073 6.63361 8.67304 6.63361C9.49707 6.63361 10.7821 5.66752 12.3509 5.66752C12.9454 5.66752 15.0817 5.72212 16.4877 7.75092ZM11.6061 3.93904C12.2549 3.16407 12.7139 2.08876 12.7139 1.01345C12.7139 0.864336 12.7014 0.713121 12.6742 0.591309C11.6187 0.631213 10.3628 1.29908 9.60555 2.18327C9.011 2.86374 8.45609 3.93904 8.45609 5.02905C8.45609 5.19287 8.48321 5.35668 8.49572 5.40919C8.56248 5.42179 8.67096 5.43649 8.77944 5.43649C9.72654 5.43649 10.9177 4.79803 11.6061 3.93904Z" fill="#fff" />
-                                        </svg>
-                                        Apple Store</a>
-                                    <a href="#" class="echo-py-hover-white"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.949986 0.589355L10.5561 10.0894L0.950929 19.5894C0.780128 19.5184 0.63437 19.399 0.531982 19.2464C0.429594 19.0937 0.375148 18.9145 0.37549 18.7313V1.4474C0.375562 1.26443 0.430067 1.08552 0.532218 0.932956C0.634369 0.780388 0.779655 0.660895 0.949986 0.589355ZM11.223 10.7487L13.3946 12.8957L3.07722 18.8022L11.223 10.7487ZM14.2407 7.76612L16.8887 9.28261C17.0317 9.3646 17.1503 9.48227 17.2328 9.62386C17.3153 9.76544 17.3587 9.92596 17.3587 10.0894C17.3587 10.2527 17.3153 10.4133 17.2328 10.5549C17.1503 10.6964 17.0317 10.8141 16.8887 10.8961L14.2398 12.4126L11.8899 10.0894L14.2407 7.76612ZM3.07722 1.37651L13.3955 7.28207L11.223 9.42997L3.07722 1.37651Z" fill="white" />
-                                        </svg> Play Store</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- End Our Software Download -->
 
     <!-- Start Footer Area -->
