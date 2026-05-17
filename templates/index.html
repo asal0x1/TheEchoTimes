@@ -619,7 +619,7 @@
                             <div class="echo-de-category-content">
                                 <h5 class="text-capitalize">Gaming</h5>
                                 <hr>
-                                {% for t in gaming %}
+                                {% for t in gaming|slice:":3" %}
                                 <div class="echo-de-category-content-img-title">
                                     <div class="echo-de-category-content-img img-transition-scale">
                                         <a href="{% url 'about' t.pk %}">
