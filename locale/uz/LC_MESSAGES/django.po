@@ -1,0 +1,543 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 13:57+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\templates\fashion.html:54 .\templates\food.html:88
+msgid "Subscribe"
+msgstr ""
+
+#: .\templates\fashion.html:74 .\templates\food.html:52
+#: .\templates\index.html:114 .\templates\sports.html:158
+msgid "Search by keyword or #"
+msgstr "Qidirish"
+
+#: .\templates\fashion.html:116 .\templates\fashion.html:249
+#: .\templates\index.html:152 .\templates\index.html:285
+#: .\templates\politics.html:43 .\templates\politics.html:174
+#: .\templates\search.html:34 .\templates\sports.html:45
+#: .\templates\sports.html:245 .\templates\sports.html:672
+#: .\templates\technology.html:43 .\templates\technology.html:176
+msgid "Home"
+msgstr "Uy"
+
+#: .\templates\fashion.html:122 .\templates\index.html:155
+#: .\templates\politics.html:47 .\templates\technology.html:48
+msgid "Pages"
+msgstr "Varoqlar"
+
+#: .\templates\fashion.html:124 .\templates\fashion.html:263
+#: .\templates\fashion.html:704 .\templates\food.html:131
+#: .\templates\food.html:330 .\templates\food.html:879
+#: .\templates\index.html:157 .\templates\index.html:299
+#: .\templates\index.html:737 .\templates\politics.html:49
+#: .\templates\politics.html:188 .\templates\politics.html:528
+#: .\templates\technology.html:50 .\templates\technology.html:190
+#: .\templates\technology.html:553
+msgid "About"
+msgstr "Haqida"
+
+#: .\templates\fashion.html:125 .\templates\fashion.html:275
+#: .\templates\index.html:158 .\templates\index.html:311
+#: .\templates\politics.html:50 .\templates\politics.html:200
+#: .\templates\technology.html:51 .\templates\technology.html:202
+msgid "Author"
+msgstr "Author"
+
+#: .\templates\fashion.html:126 .\templates\fashion.html:276
+#: .\templates\index.html:159 .\templates\index.html:312
+#: .\templates\politics.html:51 .\templates\politics.html:201
+#: .\templates\technology.html:52 .\templates\technology.html:203
+msgid "Team"
+msgstr "Guruhimiz"
+
+#: .\templates\fashion.html:127 .\templates\fashion.html:277
+#: .\templates\index.html:160 .\templates\index.html:313
+#: .\templates\politics.html:52 .\templates\politics.html:202
+#: .\templates\technology.html:53 .\templates\technology.html:204
+msgid "Error Page"
+msgstr "Xatolik varog'i"
+
+#: .\templates\fashion.html:131 .\templates\fashion.html:265
+#: .\templates\index.html:164 .\templates\index.html:301
+#: .\templates\politics.html:56 .\templates\politics.html:190
+#: .\templates\technology.html:57 .\templates\technology.html:192
+msgid "Category"
+msgstr "Kategoriyalar"
+
+#: .\templates\fashion.html:133 .\templates\index.html:166
+#: .\templates\politics.html:58 .\templates\technology.html:59
+msgid "Technology"
+msgstr "Texnalogiya"
+
+#: .\templates\fashion.html:134 .\templates\fashion.html:693
+#: .\templates\index.html:167 .\templates\index.html:725
+#: .\templates\politics.html:59 .\templates\politics.html:516
+#: .\templates\technology.html:60 .\templates\technology.html:542
+msgid "Sports"
+msgstr "Sport"
+
+#: .\templates\fashion.html:135 .\templates\fashion.html:687
+#: .\templates\index.html:168 .\templates\index.html:722
+#: .\templates\politics.html:60 .\templates\politics.html:513
+#: .\templates\technology.html:61 .\templates\technology.html:536
+msgid "Politics"
+msgstr "Siyosat"
+
+#: .\templates\fashion.html:136 .\templates\fashion.html:691
+#: .\templates\food.html:856 .\templates\food.html:869
+#: .\templates\index.html:169 .\templates\index.html:589
+#: .\templates\index.html:721 .\templates\politics.html:61
+#: .\templates\politics.html:512 .\templates\technology.html:62
+#: .\templates\technology.html:540
+msgid "Fashion"
+msgstr "Moda"
+
+#: .\templates\fashion.html:137 .\templates\index.html:170
+#: .\templates\index.html:639 .\templates\politics.html:62
+#: .\templates\technology.html:63
+msgid "Gaming"
+msgstr "O'yin"
+
+#: .\templates\fashion.html:138 .\templates\index.html:171
+#: .\templates\index.html:615 .\templates\politics.html:63
+#: .\templates\technology.html:64
+msgid "Food"
+msgstr ""
+
+#: .\templates\fashion.html:164 .\templates\food.html:227
+msgid "Videos"
+msgstr "Vidiolar"
+
+#: .\templates\fashion.html:230 .\templates\food.html:297
+#: .\templates\index.html:266 .\templates\politics.html:155
+#: .\templates\sports.html:226 .\templates\technology.html:157
+msgid "Get Newsletter"
+msgstr ""
+
+#: .\templates\fashion.html:231 .\templates\food.html:298
+#: .\templates\index.html:267 .\templates\politics.html:156
+#: .\templates\sports.html:227 .\templates\technology.html:158
+msgid "Notification products, updates"
+msgstr ""
+
+#: .\templates\fashion.html:235 .\templates\food.html:302
+#: .\templates\index.html:271 .\templates\politics.html:160
+#: .\templates\sports.html:231 .\templates\technology.html:162
+msgid "Your email..."
+msgstr "Sizning emailingiz ..."
+
+#: .\templates\fashion.html:237 .\templates\food.html:304
+#: .\templates\index.html:273 .\templates\politics.html:162
+#: .\templates\sports.html:233 .\templates\technology.html:164
+msgid "Subscribe Now"
+msgstr "Hoziroq qo'shiling"
+
+#: .\templates\fashion.html:338 .\templates\food.html:405
+#: .\templates\index.html:374 .\templates\sports.html:334
+msgid "Weekly Updates"
+msgstr "Haftalik Yangiliklar"
+
+#: .\templates\fashion.html:341 .\templates\food.html:408
+#: .\templates\index.html:377 .\templates\sports.html:337
+msgid "Let's join our newsletter!"
+msgstr ""
+
+#: .\templates\fashion.html:345 .\templates\food.html:412
+#: .\templates\index.html:381 .\templates\sports.html:341
+msgid "Submit"
+msgstr "Qabul qilish"
+
+#: .\templates\fashion.html:348 .\templates\food.html:415
+#: .\templates\index.html:384 .\templates\sports.html:344
+msgid "Do not worry we don't spam!"
+msgstr ""
+
+#: .\templates\fashion.html:498
+msgid "Featured Post"
+msgstr "Tanlangan maqola"
+
+#: .\templates\fashion.html:525 .\templates\fashion.html:585
+#: .\templates\food.html:442 .\templates\food.html:454
+#: .\templates\food.html:466 .\templates\food.html:533
+#: .\templates\technology.html:279
+msgid "Read More"
+msgstr "Ko'proq"
+
+#: .\templates\fashion.html:555 .\templates\fashion.html:681
+#: .\templates\food.html:862 .\templates\index.html:714
+#: .\templates\politics.html:505 .\templates\technology.html:366
+#: .\templates\technology.html:530
+msgid "Most Popular"
+msgstr "Eng Qiziqarli"
+
+#: .\templates\fashion.html:653 .\templates\food.html:888
+#: .\templates\index.html:686 .\templates\politics.html:477
+#: .\templates\technology.html:502
+msgid "Get In Touch"
+msgstr "Biz bilan bog‘laning"
+
+#: .\templates\fashion.html:685 .\templates\food.html:853
+#: .\templates\food.html:866 .\templates\index.html:718
+#: .\templates\politics.html:509 .\templates\technology.html:534
+msgid "Business"
+msgstr "Biznes"
+
+#: .\templates\fashion.html:686 .\templates\food.html:855
+#: .\templates\food.html:868 .\templates\index.html:720
+#: .\templates\politics.html:511 .\templates\technology.html:535
+msgid "World"
+msgstr "Dunyo"
+
+#: .\templates\fashion.html:688 .\templates\index.html:724
+#: .\templates\politics.html:515 .\templates\technology.html:537
+msgid "Tech"
+msgstr "Texnik"
+
+#: .\templates\fashion.html:689 .\templates\index.html:726
+#: .\templates\politics.html:517 .\templates\technology.html:538
+msgid "Video"
+msgstr "Video"
+
+#: .\templates\fashion.html:690 .\templates\food.html:854
+#: .\templates\food.html:867 .\templates\index.html:719
+#: .\templates\politics.html:510 .\templates\technology.html:539
+msgid "Life Style"
+msgstr "Hayot tarzi"
+
+msgid "Travels"
+msgstr "Sayohatlar"
+
+msgid "Game"
+msgstr "O‘yin"
+
+msgid "Help"
+msgstr "Yordam"
+
+msgid "Media Kit"
+msgstr "Media to‘plam"
+
+msgid "Advertise"
+msgstr "Reklama berish"
+
+msgid "Privacy Policy"
+msgstr "Maxfiylik siyosati"
+
+msgid "FAQ"
+msgstr "Ko‘p so‘raladigan savollar"
+
+msgid "Newsletter"
+msgstr "Yangiliklar byulleteni"
+
+msgid "Enter your email"
+msgstr "Emailingizni kiriting"
+
+msgid "subscribe"
+msgstr "Obuna bo‘lish"
+
+msgid "Our Newest Recipes"
+msgstr "Bizning eng yangi retseptlar"
+
+msgid "See All Post"
+msgstr "Barcha postlarni ko‘rish"
+
+msgid "Food Reviews"
+msgstr "Taom sharhlari"
+
+msgid "Perfect For Your Home"
+msgstr "Uyingiz uchun ideal"
+
+msgid ""
+"Our best tips for eating thoughtfully and living joyfully, right to your inbox."
+msgstr ""
+"Ongli ovqatlanish va quvonchli hayot uchun eng yaxshi maslahatlar to‘g‘ridan-to‘g‘ri emailingizga."
+
+msgid "Join Our Community"
+msgstr "Hamjamiyatimizga qo‘shiling"
+
+msgid "Follow us @eech_food"
+msgstr "Bizni @eech_food da kuzating"
+
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+msgid "Logout"
+msgstr "Chiqish"
+
+msgid "Login"
+msgstr "Kirish"
+
+msgid "Top Story"
+msgstr "Asosiy yangilik"
+
+msgid "Latest News"
+msgstr "So‘nggi yangiliklar"
+
+msgid "Trending"
+msgstr "Dolzarb"
+
+msgid "Discover Categories"
+msgstr "Kategoriyalarni kashf eting"
+
+msgid "View all categories"
+msgstr "Barcha kategoriyalarni ko‘rish"
+
+msgid "Show more"
+msgstr "Ko‘proq ko‘rish"
+
+msgid "Trusted since 2019"
+msgstr "2019 yildan ishonchli"
+
+msgid "The world's news,"
+msgstr "Dunyo yangiliklari,"
+
+msgid "curated for you"
+msgstr "siz uchun tanlangan"
+
+msgid ""
+"Stay ahead with breaking stories, in-depth analysis, and expert commentary — delivered to you in real time."
+msgstr ""
+"Eng so‘nggi yangiliklar, chuqur tahlillar va ekspert fikrlari bilan doimo xabardor bo‘ling — real vaqtda yetkazib beriladi."
+
+msgid "Readers"
+msgstr "O‘quvchilar"
+
+msgid "Countries"
+msgstr "Mamlakatlar"
+
+msgid "Live coverage"
+msgstr "Jonli yoritish"
+
+msgid "Welcome back"
+msgstr "Xush kelibsiz"
+
+msgid "Don't have an account?"
+msgstr "Akkauntingiz yo‘qmi?"
+
+msgid "Create one free"
+msgstr "Bepul yarating"
+
+msgid "or sign in with email"
+msgstr "yoki email orqali kiring"
+
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+msgid "your_username"
+msgstr "foydalanuvchi_nomi"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Show password"
+msgstr "Parolni ko‘rsatish"
+
+msgid "Remember me"
+msgstr "Meni eslab qol"
+
+msgid "Forgot password?"
+msgstr "Parolni unutdingizmi?"
+
+msgid "Editor's Picks"
+msgstr "Muharrir tanlovi"
+
+msgid "See all"
+msgstr "Barchasini ko‘rish"
+
+msgid "Features"
+msgstr "Xususiyatlar"
+
+msgid "Register"
+msgstr "Ro‘yxatdan o‘tish"
+
+msgid "Create your account"
+msgstr "Akkaunt yarating"
+
+msgid "Already have an account?"
+msgstr "Akkauntingiz bormi?"
+
+msgid "Sign in here"
+msgstr "Bu yerda kiring"
+
+msgid "or register with email"
+msgstr "yoki email orqali ro‘yxatdan o‘ting"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Min. 8 characters"
+msgstr "Kamida 8 ta belgi"
+
+msgid "Confirm Password"
+msgstr "Parolni tasdiqlang"
+
+msgid "Repeat your password"
+msgstr "Parolni qayta kiriting"
+
+msgid "I agree to Echo's"
+msgstr "Men Echo shartlariga roziman"
+
+msgid "Terms of Service"
+msgstr "Xizmat shartlari"
+
+msgid "and"
+msgstr "va"
+
+msgid "Keep me signed in on this device"
+msgstr "Ushbu qurilmada meni tizimda qoldir"
+
+msgid "Live now"
+msgstr "Hozir jonli"
+
+msgid "Join over"
+msgstr "Qo‘shiling"
+
+msgid "informed readers"
+msgstr "xabardor o‘quvchilar"
+
+msgid ""
+"Get unlimited access to breaking news, exclusive investigations, and expert analysis from around the globe."
+msgstr ""
+"Dunyo bo‘ylab so‘nggi yangiliklar, eksklyuziv tekshiruvlar va ekspert tahlillariga cheksiz kirish huquqiga ega bo‘ling."
+
+msgid "Unlimited articles"
+msgstr "Cheksiz maqolalar"
+
+msgid "Full access to every story, no paywalls"
+msgstr "Har bir maqolaga to‘liq kirish, to‘lovsiz"
+
+msgid "Global coverage"
+msgstr "Global qamrov"
+
+msgid "180+ countries, 40+ languages"
+msgstr "180+ mamlakat, 40+ til"
+
+msgid "Daily briefings"
+msgstr "Kunlik qisqa yangiliklar"
+
+msgid "Morning digest straight to your inbox"
+msgstr "Ertalabki yangiliklar to‘g‘ridan-to‘g‘ri emailingizga"
+
+msgid "No ads, ever"
+msgstr "Reklamasiz, doimo"
+
+msgid "Topics"
+msgstr "Mavzular"
+
+msgid "Sign in"
+msgstr "Kirish"
+
+msgid "Get started"
+msgstr "Boshlash"
+
+msgid "Search results"
+msgstr "Qidiruv natijalari"
+
+msgid "Results for"
+msgstr "Natijalar:"
+
+msgid "Search Echo News"
+msgstr "Echo News’da qidirish"
+
+msgid "article found"
+msgid_plural "articles found"
+msgstr[0] "maqola topildi"
+msgstr[1] "maqolalar topildi"
+
+msgid "Search for news, topics, authors…"
+msgstr "Yangiliklar, mavzular yoki mualliflarni qidiring..."
+
+msgid "Search"
+msgstr "Qidirish"
+
+msgid "From date"
+msgstr "Sanadan"
+
+msgid "To date"
+msgstr "Sanagacha"
+
+msgid "Source"
+msgstr "Manba"
+
+msgid "All sources"
+msgstr "Barcha manbalar"
+
+msgid "Apply"
+msgstr "Qo‘llash"
+
+msgid "Reset"
+msgstr "Tiklash"
+
+msgid "Trending:"
+msgstr "Dolzarb:"
+
+msgid "min read"
+msgstr "daq o‘qish"
+
+msgid "No results for \"%(q)s\""
+msgstr "\"%(q)s\" uchun natija topilmadi"
+
+msgid ""
+"We couldn't find any articles matching your search. Try different keywords or browse our trending topics below."
+msgstr ""
+"Hech qanday maqola topilmadi. Boshqa kalit so‘zlar bilan urinib ko‘ring yoki dolzarb mavzularni ko‘rib chiqing."
+
+msgid "Start your search"
+msgstr "Qidirishni boshlang"
+
+msgid "Type a keyword, topic, or author name above to discover the latest stories from Echo News."
+msgstr "Kalit so‘z, mavzu yoki muallif nomini kiriting va eng so‘nggi yangiliklarni toping."
+
+msgid "Top Stores"
+msgstr "Eng yaxshi hikoyalar"
+
+msgid "READ MORE"
+msgstr "Batafsil o‘qish"
+
+msgid "FEATURED STORIES"
+msgstr "Tanlangan hikoyalar"
+
+msgid "SEE ALL POST"
+msgstr "Barcha postlarni ko‘rish"
+
+msgid "By subscribing, you accepted the our"
+msgstr "Obuna bo‘lish orqali siz quyidagilarni qabul qilasiz"
+
+msgid "Policy"
+msgstr "Siyosat"
+
+msgid "VR Game"
+msgstr "VR o‘yin"
+
+msgid "AR Game"
+msgstr "AR o‘yin"
+
+msgid "Mobile Game"
+msgstr "Mobil o‘yin"
+
+msgid "E-Sports"
+msgstr "E-sport"
+
+msgid "Contact Us"
+msgstr "Biz bilan bog‘laning"
+
+msgid "1.5k Share"
+msgstr "1.5k ulashish"
+
+msgid "Top Stories"
+msgstr "Asosiy hikoyalar"

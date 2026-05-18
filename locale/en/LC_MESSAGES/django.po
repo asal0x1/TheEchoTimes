@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 13:57+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\fashion.html:54 .\templates\food.html:88
+msgid "Subscribe"
+msgstr "Subscribe"
+
+msgid "Search by keyword or #"
+msgstr "Search by keyword or #"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Pages"
+msgstr "Pages"
+
+msgid "About"
+msgstr "About"
+
+msgid "Author"
+msgstr "Author"
+
+msgid "Team"
+msgstr "Team"
+
+msgid "Error Page"
+msgstr "Error Page"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "Technology"
+msgstr "Technology"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Politics"
+msgstr "Politics"
+
+msgid "Fashion"
+msgstr "Fashion"
+
+msgid "Gaming"
+msgstr "Gaming"
+
+msgid "Food"
+msgstr "Food"
+
+msgid "Videos"
+msgstr "Videos"
+
+msgid "Get Newsletter"
+msgstr "Get Newsletter"
+
+msgid "Notification products, updates"
+msgstr "Notifications, products, updates"
+
+msgid "Your email..."
+msgstr "Your email..."
+
+msgid "Subscribe Now"
+msgstr "Subscribe Now"
+
+msgid "Weekly Updates"
+msgstr "Weekly Updates"
+
+msgid "Let's join our newsletter!"
+msgstr "Let's join our newsletter!"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Do not worry we don't spam!"
+msgstr "Do not worry, we don't spam!"
+
+msgid "Featured Post"
+msgstr "Featured Post"
+
+msgid "Read More"
+msgstr "Read More"
+
+msgid "Most Popular"
+msgstr "Most Popular"
+
+msgid "Get In Touch"
+msgstr "Get In Touch"
+
+msgid "Business"
+msgstr "Business"
+
+msgid "Word"
+msgstr "World"
+
+msgid "Tech"
+msgstr "Tech"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Life Style"
+msgstr "Lifestyle"
+
+msgid "Travels"
+msgstr "Travel"
+
+msgid "Game"
+msgstr "Games"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Media Kit"
+msgstr "Media Kit"
+
+msgid "Advertise"
+msgstr "Advertise"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Newsletter"
+msgstr "Newsletter"
+
+msgid "Enter your email"
+msgstr "Enter your email"
+
+msgid "subscribe"
+msgstr "Subscribe"
+
+msgid "Our Newest Recipes"
+msgstr "Our Newest Recipes"
+
+msgid "See All Post"
+msgstr "See All Posts"
+
+msgid "Food Reviews"
+msgstr "Food Reviews"
+
+msgid "Perfect For Your Home"
+msgstr "Perfect For Your Home"
+
+msgid ""
+"Our best tips for eating thoughtfully and living joyfully, right to your inbox."
+msgstr ""
+"Our best tips for eating thoughtfully and living joyfully, right to your inbox."
+
+msgid "Join Our Community"
+msgstr "Join Our Community"
+
+msgid "Follow us @eech_food"
+msgstr "Follow us @eech_food"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Top Story"
+msgstr "Top Story"
+
+msgid "Latest News"
+msgstr "Latest News"
+
+msgid "Trending"
+msgstr "Trending"
+
+msgid "Discover Categories"
+msgstr "Discover Categories"
+
+msgid "View all categories"
+msgstr "View all categories"
+
+msgid "Show more"
+msgstr "Show more"
+
+msgid "Trusted since 2019"
+msgstr "Trusted since 2019"
+
+msgid "The world's news,"
+msgstr "The world's news,"
+
+msgid "curated for you"
+msgstr "curated for you"
+
+msgid ""
+"Stay ahead with breaking stories, in-depth analysis, and expert commentary — delivered to you in real time."
+msgstr ""
+"Stay ahead with breaking stories, in-depth analysis, and expert commentary — delivered to you in real time."
+
+msgid "Readers"
+msgstr "Readers"
+
+msgid "Countries"
+msgstr "Countries"
+
+msgid "Live coverage"
+msgstr "Live coverage"
+
+msgid "Welcome back"
+msgstr "Welcome back"
+
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+msgid "Create one free"
+msgstr "Create one free"
+
+msgid "or sign in with email"
+msgstr "or sign in with email"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "your_username"
+msgstr "your_username"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Show password"
+msgstr "Show password"
+
+msgid "Remember me"
+msgstr "Remember me"
+
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+msgid "Editor's Picks"
+msgstr "Editor's Picks"
+
+msgid "See all"
+msgstr "See all"
+
+msgid "Features"
+msgstr "Features"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Create your account"
+msgstr "Create your account"
+
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+msgid "Sign in here"
+msgstr "Sign in here"
+
+msgid "or register with email"
+msgstr "or register with email"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Min. 8 characters"
+msgstr "Min. 8 characters"
+
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+msgid "Repeat your password"
+msgstr "Repeat your password"
+
+msgid "I agree to Echo's"
+msgstr "I agree to Echo's"
+
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+msgid "and"
+msgstr "and"
+
+msgid "Keep me signed in on this device"
+msgstr "Keep me signed in on this device"
+
+msgid "Live now"
+msgstr "Live now"
+
+msgid "Join over"
+msgstr "Join over"
+
+msgid "informed readers"
+msgstr "informed readers"
+
+msgid "Unlimited articles"
+msgstr "Unlimited articles"
+
+msgid "Full access to every story, no paywalls"
+msgstr "Full access to every story, no paywalls"
+
+msgid "Global coverage"
+msgstr "Global coverage"
+
+msgid "180+ countries, 40+ languages"
+msgstr "180+ countries, 40+ languages"
+
+msgid "Daily briefings"
+msgstr "Daily briefings"
+
+msgid "Morning digest straight to your inbox"
+msgstr "Morning digest straight to your inbox"
+
+msgid "No ads, ever"
+msgstr "No ads, ever"
+
+msgid "Clean reading experience, always free"
+msgstr "Clean reading experience, always free"
+
+msgid "Topics"
+msgstr "Topics"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "Get started"
+msgstr "Get started"
+
+msgid "Search results"
+msgstr "Search results"
+
+msgid "Results for"
+msgstr "Results for"
+
+msgid "Search Echo News"
+msgstr "Search Echo News"
+
+msgid "article found"
+msgid_plural "articles found"
+msgstr[0] "article found"
+msgstr[1] "articles found"
+
+msgid "Search for news, topics, authors…"
+msgstr "Search for news, topics, authors…"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "From date"
+msgstr "From date"
+
+msgid "To date"
+msgstr "To date"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "All sources"
+msgstr "All sources"
+
+msgid "Apply"
+msgstr "Apply"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Trending:"
+msgstr "Trending:"
+
+msgid "min read"
+msgstr "min read"
+
+msgid "No results for \"%(q)s\""
+msgstr "No results for \"%(q)s\""
+
+msgid ""
+"We couldn't find any articles matching your search. Try different keywords or browse our trending topics below."
+msgstr ""
+"We couldn't find any articles matching your search. Try different keywords or browse our trending topics below."
+
+msgid "Start your search"
+msgstr "Start your search"
+
+msgid ""
+"Type a keyword, topic, or author name above to discover the latest stories from Echo News."
+msgstr ""
+"Type a keyword, topic, or author name above to discover the latest stories from Echo News."
+
+msgid "Top Stores"
+msgstr "Top Stories"
+
+msgid "READ MORE"
+msgstr "READ MORE"
+
+msgid "FEATURED STORIES"
+msgstr "FEATURED STORIES"
+
+msgid "SEE ALL POST"
+msgstr "SEE ALL POSTS"
+
+msgid "By subscribing, you accepted the our"
+msgstr "By subscribing, you accept our"
+
+msgid "Policy"
+msgstr "Policy"
+
+msgid "VR Game"
+msgstr "VR Game"
+
+msgid "AR Game"
+msgstr "AR Game"
+
+msgid "Mobile Game"
+msgstr "Mobile Game"
+
+msgid "E-Sports"
+msgstr "E-Sports"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "1.5k Share"
+msgstr "1.5k Share"
+
+msgid "Top Stories"
+msgstr "Top Stories"

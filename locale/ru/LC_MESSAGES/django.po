@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 13:57+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\fashion.html:54 .\templates\food.html:88
+msgid "Subscribe"
+msgstr "Подписаться"
+
+msgid "Search by keyword or #"
+msgstr "Поиск по ключевому слову или #"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Pages"
+msgstr "Страницы"
+
+msgid "About"
+msgstr "О нас"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Team"
+msgstr "Команда"
+
+msgid "Error Page"
+msgstr "Страница ошибки"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Technology"
+msgstr "Технологии"
+
+msgid "Sports"
+msgstr "Спорт"
+
+msgid "Politics"
+msgstr "Политика"
+
+msgid "Fashion"
+msgstr "Мода"
+
+msgid "Gaming"
+msgstr "Игры"
+
+msgid "Food"
+msgstr "Еда"
+
+msgid "Videos"
+msgstr "Видео"
+
+msgid "Get Newsletter"
+msgstr "Подписаться на новости"
+
+msgid "Notification products, updates"
+msgstr "Уведомления, продукты, обновления"
+
+msgid "Your email..."
+msgstr "Ваш email..."
+
+msgid "Subscribe Now"
+msgstr "Подписаться сейчас"
+
+msgid "Weekly Updates"
+msgstr "Еженедельные обновления"
+
+msgid "Let's join our newsletter!"
+msgstr "Подпишитесь на нашу рассылку!"
+
+msgid "Submit"
+msgstr "Отправить"
+
+msgid "Do not worry we don't spam!"
+msgstr "Не волнуйтесь, спама не будет!"
+
+msgid "Featured Post"
+msgstr "Рекомендуемый пост"
+
+msgid "Read More"
+msgstr "Читать далее"
+
+msgid "Most Popular"
+msgstr "Самое популярное"
+
+msgid "Get In Touch"
+msgstr "Связаться с нами"
+
+msgid "Business"
+msgstr "Бизнес"
+
+msgid "Word"
+msgstr "Мир"
+
+msgid "Tech"
+msgstr "Технологии"
+
+msgid "Video"
+msgstr "Видео"
+
+msgid "Life Style"
+msgstr "Образ жизни"
+
+msgid "Travels"
+msgstr "Путешествия"
+
+msgid "Game"
+msgstr "Игры"
+
+msgid "Help"
+msgstr "Помощь"
+
+msgid "Media Kit"
+msgstr "Медиа-кит"
+
+msgid "Advertise"
+msgstr "Реклама"
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+msgid "Newsletter"
+msgstr "Рассылка"
+
+msgid "Enter your email"
+msgstr "Введите ваш email"
+
+msgid "subscribe"
+msgstr "подписаться"
+
+msgid "Our Newest Recipes"
+msgstr "Наши новые рецепты"
+
+msgid "See All Post"
+msgstr "Смотреть все посты"
+
+msgid "Food Reviews"
+msgstr "Обзоры еды"
+
+msgid "Perfect For Your Home"
+msgstr "Идеально для вашего дома"
+
+msgid "Join Our Community"
+msgstr "Присоединяйтесь к нашему сообществу"
+
+msgid "Follow us @eech_food"
+msgstr "Подписывайтесь на @eech_food"
+
+msgid "About Us"
+msgstr "О нас"
+
+msgid "Logout"
+msgstr "Выйти"
+
+msgid "Login"
+msgstr "Войти"
+
+msgid "Top Story"
+msgstr "Главная история"
+
+msgid "Latest News"
+msgstr "Последние новости"
+
+msgid "Trending"
+msgstr "В тренде"
+
+msgid "Discover Categories"
+msgstr "Откройте категории"
+
+msgid "View all categories"
+msgstr "Посмотреть все категории"
+
+msgid "Show more"
+msgstr "Показать больше"
+
+msgid "Trusted since 2019"
+msgstr "Доверяют с 2019 года"
+
+msgid "The world's news,"
+msgstr "Новости мира,"
+
+msgid "curated for you"
+msgstr "подобранные для вас"
+
+msgid "Readers"
+msgstr "Читатели"
+
+msgid "Countries"
+msgstr "Страны"
+
+msgid "Live coverage"
+msgstr "Прямые трансляции"
+
+msgid "Welcome back"
+msgstr "С возвращением"
+
+msgid "Don't have an account?"
+msgstr "Нет аккаунта?"
+
+msgid "Create one free"
+msgstr "Создать бесплатно"
+
+msgid "or sign in with email"
+msgstr "или войдите по email"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "your_username"
+msgstr "ваше_имя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Show password"
+msgstr "Показать пароль"
+
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+msgid "Editor's Picks"
+msgstr "Выбор редактора"
+
+msgid "See all"
+msgstr "Смотреть все"
+
+msgid "Features"
+msgstr "Особенности"
+
+msgid "Register"
+msgstr "Регистрация"
+
+msgid "Create your account"
+msgstr "Создайте аккаунт"
+
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+msgid "Sign in here"
+msgstr "Войти здесь"
+
+msgid "or register with email"
+msgstr "или зарегистрируйтесь по email"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Min. 8 characters"
+msgstr "Мин. 8 символов"
+
+msgid "Confirm Password"
+msgstr "Подтвердите пароль"
+
+msgid "Repeat your password"
+msgstr "Повторите пароль"
+
+msgid "I agree to Echo's"
+msgstr "Я согласен с"
+
+msgid "Terms of Service"
+msgstr "Условиями использования"
+
+msgid "and"
+msgstr "и"
+
+msgid "Keep me signed in on this device"
+msgstr "Оставаться в системе на этом устройстве"
+
+msgid "Live now"
+msgstr "Сейчас в эфире"
+
+msgid "Join over"
+msgstr "Присоединяйтесь к"
+
+msgid "informed readers"
+msgstr "осведомленным читателям"
+
+msgid "Unlimited articles"
+msgstr "Неограниченные статьи"
+
+msgid "Full access to every story, no paywalls"
+msgstr "Полный доступ ко всем материалам, без платного доступа"
+
+msgid "Global coverage"
+msgstr "Глобальное покрытие"
+
+msgid "180+ countries, 40+ languages"
+msgstr "180+ стран, 40+ языков"
+
+msgid "Daily briefings"
+msgstr "Ежедневные обзоры"
+
+msgid "Morning digest straight to your inbox"
+msgstr "Утренний дайджест прямо на почту"
+
+msgid "No ads, ever"
+msgstr "Без рекламы"
+
+msgid "Clean reading experience, always free"
+msgstr "Чистый опыт чтения, всегда бесплатно"
+
+msgid "Topics"
+msgstr "Темы"
+
+msgid "Sign in"
+msgstr "Войти"
+
+msgid "Get started"
+msgstr "Начать"
+
+msgid "Search results"
+msgstr "Результаты поиска"
+
+msgid "Results for"
+msgstr "Результаты для"
+
+msgid "Search Echo News"
+msgstr "Поиск Echo News"
+
+msgid "Search for news, topics, authors…"
+msgstr "Ищите новости, темы, авторов…"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "From date"
+msgstr "С даты"
+
+msgid "To date"
+msgstr "По дату"
+
+msgid "Source"
+msgstr "Источник"
+
+msgid "All sources"
+msgstr "Все источники"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "Reset"
+msgstr "Сбросить"
+
+msgid "Trending:"
+msgstr "В тренде:"
+
+msgid "min read"
+msgstr "мин чтения"
+
+msgid "Start your search"
+msgstr "Начните поиск"
+
+msgid "Top Stories"
+msgstr "Главные новости"
