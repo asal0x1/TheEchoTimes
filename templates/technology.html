@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+
+<!-- Mirrored from html.themewant.com/echo/technology.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2026 10:51:47 GMT -->
+<head>
+    {% load static %}
+    {% load i18n %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo News</title>
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet preload" href="{% static 'assets/css/plugins/fontawesome-5.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'assets/css/vendor/bootstrap.min.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'assets/css/vendor/swiper.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'assets/css/vendor/metismenu.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'assets/css/vendor/magnific-popup.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'assets/css/style.css' %}" as="style">
+</head>
+
+<body class="home-one home-three">
+    <!-- Start Top Header Area -->
+    <!-- Start Top Header Area -->
+    <header class="echo-header-area header-three">
+        <!-- Start Home-1 Menu & Site Logo & Social Media -->
+        <div class="echo-home-1-menu header-three">
+            <div class="echo-site-main-logo-menu-social">
+                <div class="container header-container">
+                    <div class="echo-site-main">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-6">
+                                <div class="echo-site-logo">
+                                    <a href="index.html"><img src="{% static 'assets/images/home-1/site-logo/site-logo.svg' %}" alt="Echo"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                                <nav>
+                                    <div class="echo-home-1-menu">
+                                        <ul class="list-unstyled echo-desktop-menu">
+
+                                            <a href="{% url 'home' %}" class="echo-dropdown-main-element active">{% trans "Home" %}</a>
+                                                <!-- Start Dropdown Menu -->
+
+                                                <!-- End Dropdown Menu -->
+                                            <li class="menu-item echo-has-dropdown">
+                                                <a href="#" class="echo-dropdown-main-element">{% trans "Pages" %}</a>
+                                                <ul class="echo-submenu list-unstyled menu-pages">
+                                                    <li class="nav-item"><a href="about.html">{% trans "About" %}</a></li>
+                                                    <li class="nav-item"><a href="author.html">{% trans "Author" %}</a></li>
+                                                    <li class="nav-item"><a href="team.html">{% trans "Team" %}</a></li>
+                                                    <li class="nav-item"><a href="404.html">{% trans "Error Page" %}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item echo-has-dropdown">
+                                            <a href="{% url 'category_view' %}" class="echo-dropdown-main-element">{% trans "Category" %}</a>
+                                            <ul class="echo-submenu list-unstyled menu-pages">
+                                                <li class="nav-item"><a href="{% url 'technology' %}">{% trans "Technology" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'sports' %}">{% trans "Sports" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'politics' %}">{% trans "Politics" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'fashion' %}">{% trans "Fashion" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'gaming' %}">{% trans "Gaming" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'foods' %}">{% trans "Food" %}</a></li>
+                                            </ul>
+                                        </li>
+
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6">
+                                <div class="echo-home-1-social-media-icons">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    </ul>
+
+                                     <div class="login-btn">
+                                        {% if request.user.is_authenticated %}
+                                            <a href="{% url 'logout' %}" class="echo-logout-btn">{% trans "Logout" %}</a>
+                                        {% else %}
+                                            <a href="{% url 'login' %}" class="echo-login-btn">{% trans "Login" %}</a>
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="rts-darkmode">
+                                        <a id="rts-data-toggle" class="rts-dark-light">
+                                            <i class="rts-go-dark fal fa-moon"></i>
+                                            <i class="rts-go-light far fa-sun"></i>
+                                        </a>
+                                    </div>
+                                    <div class="echo-header-top-menu-bar echo-off-canvas menu-btn">
+                                        <a href="javascript:void(0)">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Home-1 Menu & Site Logo & Social Media -->
+    </header>
+
+    <!-- End Top Header Area -->
+
+    <!-- side bar for desktop -->
+    <div id="side-bar" class="side-bar header-one">
+        <div class="inner">
+            <button class="close-icon-menu"><i class="far fa-times"></i></button>
+            <!-- inner menu area desktop start -->
+            <div class="inner-main-wrapper-desk d-none d-lg-block">
+                <div class="thumbnail">
+                    <img src="{% static 'assets/images/sidemenu-logo.svg" alt="echo">
+                </div>
+                <div class="inner-content">
+                    <div class="category-menu-area">
+                        <ul class="category-area">
+                            <li class="item">
+                                <div class="image-area">
+                                    <a href="#">
+                                        <img src="{% static 'assets/images/category-style-1/1.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="recent-post-title">
+                                        <a href="#">The incident began as an argument among.</a>
+                                    </div>
+                                    <p class="desc"><a href="#"><i class="fa-light fa-user"></i>Asley Graham</a></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="image-area"><a href="#"><img src="{% static 'assets/images/category-style-1/2.png' %}" alt=""></a></div>
+                                <div class="content">
+                                    <div class="recent-post-title">
+                                        <a href="#">The incident began as an argument among.</a>
+                                    </div>
+                                    <p class="desc"><a href="#"><i class="fa-light fa-user"></i>Emily Dicingson</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="form-inner">
+                            <div class="content">
+                                <div class="newsletter-image">
+                                    <img src="{% static 'assets/images/home-1/feature-right/news-item-1.png' %}" alt="">
+                                </div>
+                                <h3 class="title">{% trans "Get Newsletter" %}</h3>
+                                <p class="desc">{% trans "Notification products, updates" %}</p>
+                            </div>
+                            <form action="#">
+                                <div class="input-div">
+                                    <input type="email" placeholder="{% trans "Your email..." %}" required>
+                                </div>
+                                <button type="submit" class="subscribe-btn">{% trans "Subscribe Now" %}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu area start -->
+        <div class="mobile-menu d-block d-lg-none">
+            <nav class="nav-main mainmenu-nav mt--30">
+                <ul class="mainmenu" id="mobile-menu-active">
+                    <li class="has-droupdown">
+                        <a href="#" class="main">{% trans "Home" %}</a>
+                        <ul class="submenu">
+                            <li><a class="mobile-menu-link" href="index.html">Home 01 - Main</a></li>
+                            <li><a class="mobile-menu-link" href="fashion.html">Home 02 - Fashion</a></li>
+                            <li><a class="mobile-menu-link" href="technology.html">Home 03 - Technology</a></li>
+                            <li><a class="mobile-menu-link" href="gaming.html">Home 04 - Gamming</a></li>
+                            <li><a class="mobile-menu-link" href="sports.html">Home 05 - Sports</a></li>
+                            <li><a class="mobile-menu-link" href="travel.html">Home 06 - Travel</a></li>
+                            <li><a class="mobile-menu-link" href="AI.html">Home 07 - AI</a></li>
+                            <li><a class="mobile-menu-link" href="politics.html">Home 08 - Politics</a></li>
+                            <li><a class="mobile-menu-link" href="food.html">Home 09 - Food</a></li>
+                            <li><a class="mobile-menu-link" href="index-ten.html">Home 10 - Photography</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a class="main mobile-menu-link" href="about.html">{% trans "About" %}</a></li>
+                    <li class="has-droupdown">
+                        <a href="#" class="main">{% trans "Category" %}</a>
+                        <ul class="submenu">
+                            <li><a class="mobile-menu-link" href="category-style-1.html">Category Style 1</a></li>
+                            <li><a class="mobile-menu-link" href="category-style-2.html">Category Style 2</a></li>
+                            <li><a class="mobile-menu-link" href="category.html">Category Style 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-droupdown">
+                        <a href="#" class="main">Features</a>
+                        <ul class="submenu">
+                            <li><a class="mobile-menu-link" href="author.html">{% trans "Author" %}</a></li>
+                            <li><a class="mobile-menu-link" href="team.html">{% trans "Team" %}</a></li>
+                            <li><a class="mobile-menu-link" href="404.html">{% trans "Error Page" %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-droupdown">
+                        <a href="#" class="main">Post</a>
+                        <ul class="submenu">
+                            <li><a class="mobile-menu-link" href="post-style-1.html">Post Style 1</a></li>
+                            <li><a class="mobile-menu-link" href="post-style-2.html">Post Style 2</a></li>
+                            <li><a class="mobile-menu-link" href="post-style-3.html">Post Style 3</a></li>
+                            <li><a class="mobile-menu-link" href="post-details.html">Post Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a class="main mobile-menu-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-wrapper-one">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- mobile menu area end -->
+    </div>
+    <!-- header style two End -->
+    <!-- End Top Header Area -->
+
+    <!-- Start Hero Area -->
+    <section class="echo-hero-section home-three">
+        <div class="echo-hero">
+            <div class="container">
+                <div class="echo-hero-inner">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="banner-content">
+                                <a href="catagory-details2.html" class="content-catagory-tag">{{ last_tech.category }}</a>
+                                <div class="contents">
+                                    <h2 class="content-title1"><a href="{% url 'about' last_tech.id %}">{{ last_tech.title }}</a></h2>
+                                    <p class="desc">{{ last_tech.short_description }}</p>
+                                    <div class="content-bottom-info mb--25">
+                                        <ul>
+                                            <li class="author">
+
+                                                <span>{{ last_tech.author_name }}</span>
+                                            </li>
+                                            <li><i class="fa-light fa-clock"></i>{{ last_tech.date }}</li>
+                                            <li><i class="fa-light fa-eye"></i>{{ last_tech.views }}</li>
+                                            <li><i class="fa-light fa-arrow-up-from-bracket"></i>{% trans "1.5k Share" %}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="echo-button-wrapper">
+                                        <a href="{% url 'about' last_tech.id %}" class="rts-btn btn-secondary">{% trans "Read More" %} <i class="fa-light fa-arrow-right"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="echo-hero-right-side">
+                                <div class="right-side-inner">
+                                    <h3 class="sub-title">{% trans "Top Stories" %}</h3>
+                                    <div class="content-box">
+                                        <ul>
+                                            {% for seen in most_seen|slice:":3" %}
+                                            <li class="wrapper">
+                                                <div class="image-area img-transition-scale">
+                                                    <a href="post-details.html">
+                                                        <img src="{{ seen.main_image.url }}" alt="hero">
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    {% for tag in seen.tags.all %}
+                                                    <a href="catagory-details2.html" class="content-catagory-tag">{{ tag.name }}</a>
+                                                    {% endfor %}
+                                                    <h4 class="content-title1"><a href="{% url 'about' seen.id %}">{{ seen.title }}</a></h4>
+                                                    <div class="content-bottom-info">
+                                                        <ul>
+                                                            <li><i class="fa-light fa-clock"></i>{{ seen.date }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
+
+    <!-- Start Latest News Slider -->
+    <section class="echo-latest-news-area home-three">
+        <div class="echo-latest-news-content">
+            <div class="container">
+                <h6 class="sub-title">{% trans "Latest News" %} <span>/</span></h6>
+                <div class="echo-latest-news-full-content">
+                    <div class="row">
+                        {% for tech in techs %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="echo-latest-news-main-content">
+                                <div class="echo-latest-news-img img-transition-scale">
+                                    <a href="{% url 'about' tech.id %}">
+                                        <img src="{{ tech.main_image.url }}" alt="Echo" class="img-hover">
+                                    </a>
+                                    {% for tag in tech.tags.all %}
+                                    <span class="content-catagory-tag">{{ tag.name }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div class="echo-latest-news-single-title">
+                                    <h5><a href="{% url 'about' tech.id %}" class="text-capitalize title-hover">{{ tech.title }}</a></h5>
+                                </div>
+                                <div class="echo-latest-news-time-views">
+                                    <a href="#" class="pe-none"><i class="fa-light fa-clock"></i>{{ tech.date }}</a>
+                                    <a href="#" class="pe-none"><i class="fa-light fa-eye"></i>{{ tech.views }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest News Slider -->
+
+    <!-- Start Feature Area -->
+
+
+    <!-- Start Trending News Area -->
+    <section class="echo-trending-area home-three">
+        <div class="echo-trending-content">
+            <div class="container">
+                <h5 class="section-title">{% trans "Most Popular" %} /</h5>
+                <div class="echo-trending-full-content">
+                    <div class="row gx-6">
+                        <div class="col-xl-6">
+                            {% for seen in most_seen|slice:":2" %}
+                            <div class="echo-trending-right-site-post">
+                                <div class="echo-trending-right-site-post-img img-transition-scale">
+                                    <a href="{% url 'about' seen.id %}">
+                                        <img src="{{ seen.main_image.url }}" alt="Echo" class="img-hover">
+                                    </a>
+                                </div>
+                                <div class="echo-trending-right-site-post-title">
+                                    <h4 class="text-capitalize"><a href="{% url 'about' seen.id %}" class="title-hover">{{ seen.title }}</a></h4>
+                                </div>
+                                <div class="echo-trending-right-site-like-comment-share-icons">
+                                    <div class="echo-trending-right-like-comment-content">
+                                        <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> {{ seen.date }}</a>
+                                    </div>
+                                    <div class="echo-trending-right-like-comment-content">
+                                        <a href="#" class="pe-none"><i class="fa-light fa-eye"></i>{{ seen.views }}</a>
+                                    </div>
+                                    <div class="echo-trending-right-like-comment-content">
+                                        <a href="#" class="pe-none"><i class="fa-light fa-arrow-up-from-bracket"></i>
+                                            1.5k Share</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                        <div class="col-xl-6">
+                            {% for most in most_seen|slice:"2:" %}
+                            <div class="echo-trending-left-site-post">
+                                <div class="echo-trending-left-site-post-img img-transition-scale">
+                                    <a href="{% url 'about' most.id %}">
+                                        <img src="{{ most.main_image.url }}" alt="Echo" class="img-hover">
+                                    </a>
+                                </div>
+                                <div class="echo-trending-right-site-post-title">
+                                    {% for tag in most.tags.all %}
+                                    <a href="catagory-details2.html" class="content-catagory-tag">{{ tag }}</a>
+                                    {% endfor %}
+                                    <h5><a href="post-details.html" class="text-capitalize title-hover">{{ most.title }}</a></h5>
+                                    <div class="echo-trending-post-bottom-icons">
+                                        <a href="#" class="pe-none"><i class="fa-light fa-clock"></i> {{ most.date }}</a>
+                                        <a href="#" class="pe-none"><i class="fa-light fa-eye"></i>{{ most.views }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Trending News Area -->
+
+    <section class="echo-cta-area">
+        <div class="container">
+            <div class="echo-cta-area-inner">
+                <div class="image text-center"><img src="{% static 'assets/images/home-1/cta/ad.html" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Video Area-->
+<!--    <section class="echo-video-area home-three">-->
+<!--        <div class="container">-->
+<!--            <div class="echo-video-area-inner">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-7">-->
+<!--                        <div class="banner-content">-->
+<!--                            {% for tech in techs %}-->
+<!--                                {% for tech_tag in tech.tags.all %}-->
+<!--                                    {% if tech_tag.name == "Gadget" %}-->
+<!--                            <a href="catagory-details2.html" class="content-catagory-tag">Gadget</a>-->
+<!--                            <div class="contents">-->
+<!--                                <h2 class="content-title1"><a href="{% url 'about' tech.id %}">{{ tech.title }}</a></h2>-->
+<!--                                <p class="desc">{{ tech.short_description }}</p>-->
+<!--                            </div>-->
+<!--                                    {% endif %}-->
+<!--                                {% endfor %}-->
+<!--                            {% endfor %}-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="echo-bottom-post-area">-->
+<!--                    <div class="row">-->
+<!--                        {% for tags in tech_tags %}-->
+<!--                        {% for tech in techs %}-->
+<!--                        {% if tags.name == tech.tags %}-->
+<!--                        <div class="col-lg-4">-->
+<!--                            <div class="wrapper">-->
+<!--                                <h5 class="title">{{ tags.name }}</h5>-->
+<!--                                <div class="echo-trending-left-site-post">-->
+<!--                                    <div class="echo-trending-left-site-post-img img-transition-scale">-->
+<!--                                        <a href="post-details.html">-->
+<!--                                            <img src="{{ tech.main_image.url }}" alt="Echo" class="img-hover">-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="echo-trending-right-site-post-title">-->
+<!--                                        <a href="catagory-details2.html" class="content-catagory-tag">{{ tags.name }}</a>-->
+<!--                                        <h5><a href="post-details.html" class="text-capitalize title-hover">{{ tech.title }}</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        {% endif %}-->
+<!--                        {% endfor %}-->
+<!--                        {% endfor %}-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!-- End Video Area -->
+    <!-- Start Our Software Download -->
+
+    <!-- End Our Software Download -->
+
+    <!-- Start Footer Area -->
+    <!-- Start Footer Area -->
+
+
+
+    <footer class="echo-footer-area" id="footer">
+        <div class="container">
+            <div class="echo-row">
+                <div class="echo-footer-content-1">
+                    <div class="echo-get-in-tuch">
+                        <h4 class="text-capitalize">{% trans "Get In Touch" %}</h4>
+                    </div>
+                    <div class="echo-footer-address">
+                        <span class="text-capitalize"><i class="fa-regular fa-map"></i> 255 Sheet, New Avanew, NY</span>
+                        <span class="text-capitalize"><i class="fa-regular fa-phone"></i> (00) 236 123 456 88</span>
+                        <span class="text-capitalize"><i class="fa-sharp fa-regular fa-envelope"></i>
+                            info@demomail.com</span>
+                        <div class="echo-footer-social-media">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="echo-footer-content-2">
+                    <div class="echo-get-in-tuch">
+                        <h4 class="text-capitalize">{% trans "Most Popular" %}</h4>
+                    </div>
+                    <div class="echo-footer-most-popular">
+                        <ul class="list-unstyled">
+                            <li><a href="#">{% trans "Business" %}</a></li>
+                            <li><a href="#">{% trans "World" %}</a></li>
+                            <li><a href="#">{% trans "Politics" %}</a></li>
+                            <li><a href="#">{% trans "Tech" %}</a></li>
+                            <li><a href="#">{% trans "Video" %}</a></li>
+                            <li><a href="#">{% trans "Life Style" %}</a></li>
+                            <li><a href="#">{% trans "Fashion" %}</a></li>
+                            <li><a href="#">{% trans "Travels" %}</a></li>
+                            <li><a href="#">{% trans "Sports" %}</a></li>
+                            <li><a href="#">{% trans "Game" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="echo-footer-content-3">
+                    <div class="echo-get-in-tuch">
+                        <h4 class="text-capitalize">{% trans "Help" %}</h4>
+                    </div>
+                    <div class="echo-footer-help">
+                        <ul class="list-unstyled">
+                            <li><a href="about.html">{% trans "About" %}</a></li>
+                            <li><a href="#">{% trans "Media Kit" %}</a></li>
+                            <li><a href="#">{% trans "Advertise" %}</a></li>
+                            <li><a href="#">{% trans "Privacy Policy" %}</a></li>
+                            <li><a href="#">{% trans "FAQ" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="echo-footer-content-4">
+                    <div class="echo-get-in-tuch">
+                        <h4 class="text-capitalize">{% trans "Newsletter" %}</h4>
+                    </div>
+                    <div class="echo-footer-news-text">
+                        <p>Register now to get latest updates on promotion & coupons.</p>
+                    </div>
+                    <div class="echo-subscribe-box-button">
+                        <form action="https://html.themewant.com/echo/POST">
+                            <div class="echo-subscribe-input-fill">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.8" d="M14.4414 11.6674C14.4402 11.8345 14.3734 11.9944 14.2553 12.1127C14.1371 12.2309 13.9773 12.2979 13.8101 12.2993H2.34541C2.17792 12.2991 2.01736 12.2325 1.89899 12.114C1.78062 11.9955 1.71413 11.8348 1.71413 11.6674V11.0265H13.1687V3.58109L8.07777 8.16291L1.71413 2.43564V1.48109C1.71413 1.31232 1.78118 1.15045 1.90052 1.03111C2.01986 0.911772 2.18172 0.844727 2.3505 0.844727H13.805C13.9738 0.844727 14.1357 0.911772 14.255 1.03111C14.3744 1.15045 14.4414 1.31232 14.4414 1.48109V11.6674ZM3.26304 2.11745L8.07777 6.45109L12.8925 2.11745H3.26304ZM0.441406 8.48109H5.53232V9.75382H0.441406V8.48109ZM0.441406 5.29927H3.62322V6.572H0.441406V5.29927Z" fill="white" />
+                                </svg>
+                                <input type="email" placeholder="{% trans "Enter your email" %}" required>
+                            </div>
+                            <div class="echo-footer-area-subscribe-button">
+                                <a href="#" class="echo-py-btn-border text-capitalize">{% trans "subscribe" %}</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="echo-footer-copyright-area">
+                <div class="copyright-area-inner">
+                    <div class="footer-logo"><a href="index.html"><img src="assets/images/home-1/site-logo/site-logo-w.html" alt="logo"></a></div>
+                    <div class="copyright-content">
+                        <h5 class="title">© Copyright <script>document.write(new Date().getFullYear());</script> by Echo</h5>
+                    </div>
+                    <div class="select-area">
+                        <select name="lang" id="lang">
+                            <option value="english">English</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="urdu">Urdu</option>
+                            <option value="french">French</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="marathi">Marathi</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+    <!-- End Footer Area -->
+
+    <!-- Start Scricpt Area -->
+
+    <!--scroll top button-->
+    <button class="scroll-top-btn">
+        <i class="fa-regular fa-angles-up"></i>
+    </button>
+    <!--scroll top button end-->
+
+    <div id="anywhere-home"></div>
+
+    <script src="{% static 'assets/js/vendor/jquery.min.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/audio.js' %}" defer></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}" defer></script>
+    <script src="{% static 'assets/js/vendor/swiper.js' %}" defer></script>
+    <script src="{% static 'assets/js/vendor/metisMenu.min.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/audio.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/magnific-popup.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/contact-form.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/resize-sensor.min.js' %}" defer></script>
+    <script src="{% static 'assets/js/plugins/theia-sticky-sidebar.min.js' %}" defer></script>
+
+    <!-- main js file -->
+    <script src="{% static 'assets/js/main.js' %}" defer></script>
+    <!-- End Footer Area -->
+
+</body>
+
+
+<!-- Mirrored from html.themewant.com/echo/technology.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2026 10:51:56 GMT -->
+</html>
