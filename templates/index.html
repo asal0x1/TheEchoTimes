@@ -31,24 +31,7 @@
                     <div class="row align-items-center plr_md--30">
                         <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                             <div class="echo-meta-total-jobs">
-                                <div class="echo-meta-jobs-icons">
-                                    <img src="{% static 'assets/images/home-1/header-top/home-1-header-top.png' %}" alt="Echo">
-                                </div>
-                                <div class="echo-meta-jobs-text">
-                                    <div class="swiper rt-treding-slider10">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <span>Meta to cut 10,000 jobs in second...</span>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <span>Elevating Your Office Attire...</span>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <span>Beauty and Wellness Secrets...</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
@@ -121,18 +104,10 @@
                                                                     placeholder="{% trans 'Search by keyword or #' %}">
                                                         </div>
                                                     </form>
-                                                    <div class="search-close-icon"><i class="fa-regular fa-xmark-large rt-xmark"></i></div>
                                                 </div>
 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="echo-header-top-menu-bar menu-btn">
-                                        <a href="javascript:void(0)">
-                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
-                                            </svg>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -158,24 +133,15 @@
                                     <ul class="list-unstyled echo-desktop-menu">
                                             <a href="{% url 'home' %}" class="echo-dropdown-main-element active">{% trans "Home" %}</a>
 
+
                                         <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">{% trans "Pages" %}</a>
-                                            <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="about.html">{% trans "About" %}</a></li>
-                                                <li class="nav-item"><a href="author.html">{% trans "Author" %}</a></li>
-                                                <li class="nav-item"><a href="team.html">{% trans "Team" %}</a></li>
-                                                <li class="nav-item"><a href="404.html">{% trans "Error Page" %}</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="{% url 'category_view' %}" class="echo-dropdown-main-element">{% trans "Category" %}</a>
+                                            <a href="#" class="echo-dropdown-main-element">{% trans "Category" %}</a>
                                             <ul class="echo-submenu list-unstyled menu-pages">
                                                 <li class="nav-item"><a href="{% url 'technology' %}">{% trans "Technology" %}</a></li>
                                                 <li class="nav-item"><a href="{% url 'sports' %}">{% trans "Sports" %}</a></li>
                                                 <li class="nav-item"><a href="{% url 'politics' %}">{% trans "Politics" %}</a></li>
                                                 <li class="nav-item"><a href="{% url 'fashion' %}">{% trans "Fashion" %}</a></li>
                                                 <li class="nav-item"><a href="{% url 'gaming' %}">{% trans "Gaming" %}</a></li>
-                                                <li class="nav-item"><a href="{% url 'foods' %}">{% trans "Food" %}</a></li>
                                             </ul>
                                         </li>
 
@@ -212,13 +178,6 @@
                                         {% endif %}
                                     </div>
 
-                                <div class="echo-header-top-menu-bar menu-btn">
-                                    <a href="javascript:void(0)">
-                                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
-                                        </svg>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -425,11 +384,9 @@
                                         <a href="#"><i class="fa-light fa-eye"></i> {{ last_new.views }}</a>
                                     </div>
                                     <div class="echo-hero-area-like-read-comment-share">
-                                        <a href="#"><i class="fa-light fa-comment-dots"></i> 05 Comment</a>
+                                        <a href="#"><i class="fa-light fa-comment-dots"></i> {{ last_new.comments.count }}</a>
                                     </div>
-                                    <div class="echo-hero-area-like-read-comment-share">
-                                        <a href="#"><i class="fa-light fa-arrow-up-from-bracket"></i> 1.5k Share</a>
-                                    </div>
+
                                 </div>
                                 {% endif %}
 
@@ -559,8 +516,7 @@
                                         <a href="#" class="pe-none"><i class="fa-light fa-eye"></i>{{ seen.views }}</a>
                                     </div>
                                     <div class="echo-trending-right-like-comment-content">
-                                        <a href="#" class="pe-none"><i class="fa-light fa-comment-dots"></i> 05
-                                            Comment</a>
+                                        <a href="#" class="pe-none"><i class="fa-light fa-comment-dots"></i> {{ seen.comments.count }}</a>
                                     </div>
                                     <div class="echo-trending-right-like-comment-content">
                                         <a href="#" class="pe-none"><i class="fa-light fa-arrow-up-from-bracket"></i>
@@ -686,114 +642,6 @@
 
     <!-- Start Footer Area -->
     <!-- Start Footer Area -->
-    <footer class="echo-footer-area" id="footer">
-        <div class="container">
-            <div class="echo-row">
-                <div class="echo-footer-content-1">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">{% trans "Get In Touch" %}</h4>
-                    </div>
-                    <div class="echo-footer-address">
-                        <span class="text-capitalize"><i class="fa-regular fa-map"></i> 255 Sheet, New Avanew, NY</span>
-                        <span class="text-capitalize"><i class="fa-regular fa-phone"></i> (00) 236 123 456 88</span>
-                        <span class="text-capitalize"><i class="fa-sharp fa-regular fa-envelope"></i>
-                            info@demomail.com</span>
-                        <div class="echo-footer-social-media">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="echo-footer-content-2">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">{% trans "Most Popular" %}</h4>
-                    </div>
-                    <div class="echo-footer-most-popular">
-                        <ul class="list-unstyled">
-                            <li><a href="#">{% trans "Business" %}</a></li>
-                            <li><a href="#">{% trans "Life Style" %}</a></li>
-                            <li><a href="#">{% trans "World" %}</a></li>
-                            <li><a href="#">{% trans "Fashion" %}</a></li>
-                            <li><a href="#">{% trans "Politics" %}</a></li>
-                            <li><a href="#">{% trans "Travels" %}</a></li>
-                            <li><a href="#">{% trans "Tech" %}</a></li>
-                            <li><a href="#">{% trans "Sports" %}</a></li>
-                            <li><a href="#">{% trans "Video" %}</a></li>
-                            <li><a href="#">{% trans "Game" %}</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="echo-footer-content-3">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">{% trans "Help" %}</h4>
-                    </div>
-                    <div class="echo-footer-help">
-                        <ul class="list-unstyled">
-                            <li><a href="about.html">{% trans "About" %}</a></li>
-                            <li><a href="#">{% trans "Media Kit" %}</a></li>
-                            <li><a href="#">{% trans "Advertise" %}</a></li>
-                            <li><a href="#">{% trans "Privacy Policy" %}</a></li>
-                            <li><a href="#">{% trans "FAQ" %}</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="echo-footer-content-4">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">{% trans "Newsletter" %}</h4>
-                    </div>
-                    <div class="echo-footer-news-text">
-                        <p>Register now to get latest updates on promotion & coupons.</p>
-                    </div>
-                    <div class="echo-subscribe-box-button">
-                        <form action="https://html.themewant.com/echo/POST">
-                            <div class="echo-subscribe-input-fill">
-                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.8" d="M14.4414 11.6674C14.4402 11.8345 14.3734 11.9944 14.2553 12.1127C14.1371 12.2309 13.9773 12.2979 13.8101 12.2993H2.34541C2.17792 12.2991 2.01736 12.2325 1.89899 12.114C1.78062 11.9955 1.71413 11.8348 1.71413 11.6674V11.0265H13.1687V3.58109L8.07777 8.16291L1.71413 2.43564V1.48109C1.71413 1.31232 1.78118 1.15045 1.90052 1.03111C2.01986 0.911772 2.18172 0.844727 2.3505 0.844727H13.805C13.9738 0.844727 14.1357 0.911772 14.255 1.03111C14.3744 1.15045 14.4414 1.31232 14.4414 1.48109V11.6674ZM3.26304 2.11745L8.07777 6.45109L12.8925 2.11745H3.26304ZM0.441406 8.48109H5.53232V9.75382H0.441406V8.48109ZM0.441406 5.29927H3.62322V6.572H0.441406V5.29927Z" fill="white" />
-                                </svg>
-                                <input type="email" placeholder="{% trans 'Enter your email' %}" required>
-                            </div>
-                            <div class="echo-footer-area-subscribe-button">
-                                <a href="#" class="echo-py-btn-border text-capitalize">{% trans "subscribe" %}</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="echo-footer-copyright-area">
-                <div class="copyright-area-inner">
-                    <div class="footer-logo"><a href="index.html"><img src="{% static 'assets/images/home-1/site-logo/footer-logo-1.svg' %}" alt="logo"></a></div>
-                    <div class="copyright-content">
-                        <h5 class="title">© Copyright <script>document.write(new Date().getFullYear());</script> by Echo</h5>
-                    </div>
-                    <div class="select-area">
-                        <select name="lang" id="lang">
-                            <option value="english">English</option>
-                            <option value="bengali">Bengali</option>
-                            <option value="arabic">Arabic</option>
-                            <option value="hindi">Hindi</option>
-                            <option value="urdu">Urdu</option>
-                            <option value="french">French</option>
-                            <option value="tamil">Tamil</option>
-                            <option value="marathi">Marathi</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <!-- End Footer Area -->
     <!-- End Footer Area -->
 
