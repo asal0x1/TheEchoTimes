@@ -33,7 +33,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-7 col-sm-7 col-7">
                             <div class="echo-site-logo">
                                 <a href="index.html">
-                                    <img src="{% static 'assets/images/home-1/site-logo/site-logo4.html" alt="Echo">
+                                    <img src="{% static 'assets/images/home-1/site-logo/site-logo.svg' %}" alt="Echo">
                                 </a>
                             </div>
                         </div>
@@ -41,95 +41,22 @@
                             <nav>
                                 <div class="echo-home-1-menu">
                                     <ul class="list-unstyled echo-desktop-menu">
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element active">{% trans "Home" %}</a>
+
+                                            <a href="{% url 'home' %}" class="echo-dropdown-main-element active">{% trans "Home" %}</a>
                                             <!-- Start Dropdown Menu -->
-                                            <ul class="echo-submenu list-unstyled menu-home">
-                                                <li class="nav-item"><a href="index.html">Home 01 - Main</a></li>
-                                                <li class="nav-item"><a href="fashion.html">Home 02 - Fashion</a></li>
-                                                <li class="nav-item"><a href="technology.html">Home 03 - Technology</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="gaming.html">Home 04 - Gamming</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="sports.html">Home 05 - Sports</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="travel.html">Home 06 - Travel</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="AI.html">Home 07 - AI</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="politics.html">Home 08 - Politics</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="food.html">Home 09 - Food</a></li>
-                                                <li class="nav-item"><a class="mobile-menu-link" href="index-ten.html">Home 10 - Photography</a></li>
-                                            </ul>
-                                            <!-- End Dropdown Menu -->
-                                        </li>
+
+
                                         <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Pages</a>
+                                            <a href="#" class="echo-dropdown-main-element">{% trans "Category" %}</a>
                                             <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="about.html">About</a></li>
-                                                <li class="nav-item"><a href="author.html">Author</a></li>
-                                                <li class="nav-item"><a href="team.html">Team</a></li>
-                                                <li class="nav-item"><a href="404.html">Error Page</a></li>
+                                                <li class="nav-item"><a href="{% url 'technology' %}">{% trans "Technology" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'sports' %}">{% trans "Sports" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'politics' %}">{% trans "Politics" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'fashion' %}">{% trans "Fashion" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'gaming' %}">{% trans "Gaming" %}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Category</a>
-                                            <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="category-style-1.html">Category Style 1</a></li>
-                                                <li class="nav-item"><a href="category-style-2.html">Category Style 2</a></li>
-                                                <li class="nav-item"><a href="category.html">Category Style 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">News</a>
-                                            <ul class="mega-menu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="post-style-1.html">
-                                                        <div class="mega-menu-item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-1.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Xi, Putin hail 'new era'....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-style-2.html">
-                                                        <div class="mega-menu-item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-2.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Elon Musk's global empire....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-style-3.html">
-                                                        <div class="mega-menu item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-3.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Sri Lanka to receive first ....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                                <li class="nav-item"><a href="post-details.html">
-                                                        <div class="mega-menu item">
-                                                            <div class="mega-menu-img img-transition-scales">
-                                                                <img src="{% static 'assets/images/home-1/latest-news/item-4.png' %}" alt="Echo" class="img-hovers">
-                                                            </div>
-                                                            <div class="mega-menu-title">
-                                                                <h5>Turkey earthquake prepare....</h5>
-                                                            </div>
-                                                        </div>
-                                                    </a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Post</a>
-                                            <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="post-style-1.html">Post Style 1</a></li>
-                                                <li class="nav-item"><a href="post-style-2.html">Post Style 2</a></li>
-                                                <li class="nav-item"><a href="post-style-3.html">Post Style 3</a></li>
-                                                <li class="nav-item"><a href="post-details.html">Post Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="contact.html" class="echo-dropdown-main-element">Contact</a></li>
+
                                     </ul>
                                 </div>
                             </nav>
@@ -145,30 +72,8 @@
                                             </a>
                                         </div>
 
-                                        <a href="#" id="search" class="echo-header-top-search-btn search-icon action-item icon">
-                                            <svg width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.11544 16.961C13.3484 16.961 16.7798 13.5296 16.7798 9.29665C16.7798 5.06373 13.3484 1.63226 9.11544 1.63226C4.88251 1.63226 1.45105 5.06373 1.45105 9.29665C1.45105 13.5296 4.88251 16.961 9.11544 16.961Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M14.4461 15.0254L17.451 18.0225" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
-                                        <div class="search-input-area">
-                                            <div class="container">
-                                                <div class="search-input-inner">
-                                                    <div class="input-div">
-                                                        <input id="searchInput1" class="search-input" type="text" placeholder="{% trans "Search by keyword or #" %}">
-                                                    </div>
-                                                    <div class="search-close-icon"><i class="fa-regular fa-xmark-large rt-xmark"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
-                                </div>
-                                <div class="echo-header-top-menu-bar menu-btn">
-                                    <a href="javascript:void(0)">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
-                                            <path d="M18.5572 20.3354V23.1139H3.27555V20.3354H18.5572ZM25.5034 10.6107V13.3892H0.49707V10.6107H25.5034ZM22.7249 0.885986V3.66447H7.44328V0.885986H22.7249Z" fill="white" />
-                                        </svg>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +133,7 @@
                             </div>
                             <form action="#">
                                 <div class="input-div">
-                                    <input type="email" placeholder="{% trans "Your email..." %}" required>
+                                    <input type="email" placeholder="{% trans 'Your email...' %}" required>
                                 </div>
                                 <button type="submit" class="subscribe-btn">{% trans "Subscribe Now" %}</button>
                             </form>
@@ -428,268 +333,6 @@
 
     <!-- Start Feature Area -->
     <!-- End Feature Area -->
-
-    <!-- Start Feature Area -->
-<!--    <section class="hm5-feature-area area2">-->
-<!--        <div class="hm-5-container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-xl-12 col-lg-12 col-md-12">-->
-<!--                    <div class="hm5-feature-title">-->
-<!--                        <div class="hm-5-main-title">-->
-<!--                            <h2>Weekly Training</h2>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="hm5-feature-content">-->
-<!--                <div class="row gx-5">-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item5.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>football</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">The 5 Greatest European Ryder Cup Victories of All Time</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item6.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>Cicket</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">The Greatest Sports Quotes-->
-<!--                                            A Collection of Amazing</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item7.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>Fitness</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">How to get your kids in to Cricket</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item8.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>football</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">The Greatest Sports Quotes-->
-<!--                                            A Collection of Amazing</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item9.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>football</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">5 Things to Watch for in Patriots Preseason Opener</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-xl-4 col-lg-4 col-md-6">-->
-<!--                        <div class="hm5-featurea-main-content">-->
-<!--                            <div class="hm5-feature-img img-transition-scale">-->
-<!--                                <a href="post-details.html">-->
-<!--                                    <img src="{% static 'assets/images/hm-5/feature/item10.html" alt="Echo">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="hm5-featurea-meta-content">-->
-<!--                                <div class="hm-5-meta-box">-->
-<!--                                    <div class="hm-5-meta-btn">-->
-<!--                                        <span>football</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="hm-5-meta-date">-->
-<!--                                        <span>01 Jan 2024</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="hm5-feature-img-title">-->
-<!--                                    <h3>-->
-<!--                                        <a href="post-details.html" class="text-capitalize title-hover">Why Kane to Bayern is the perfect fit</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                                <div class="feature-img-content-btn">-->
-<!--                                    <a href="#" class="hm5-btn-2">READ MORE <img class="arrow-1" src="{% static 'assets/images/hm-5/hm-5-arrow2.html" alt="Echo"><img class="arrow-2" src="{% static 'assets/images/hm-5/hm-5-arrow2-w.html" alt="Echo"></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-    <!-- End Feature Area -->
-
-    <!-- Start Feature Area -->
-
-    <!-- End Feature Area -->
-
-    <!-- Start Feature Area -->
-
-    <!-- End Feature Area -->
-
-    <!-- Start Our Software Download -->
-
-    <!-- End Our Software Download -->
-
-    <!-- Start Social Media Hm2 -->
-
-    <!-- End Social Media Hm2 -->
-
-    <!-- Start Footer Area -->
-    <!-- Start Footer Area -->
-    <footer class="echo-footer-area4" id="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-top-inner">
-                    <div class="footer-top-left">
-                        <h3 class="content">Get the gaming world News & Stories into your inbox</h3>
-                    </div>
-                    <div class="footer-top-right">
-                        <div class="echo-subscribe-box-button">
-                            <form action="https://html.themewant.com/echo/POST">
-                                <div class="echo-subscribe-input-fill">
-                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.8" d="M14.4414 11.6674C14.4402 11.8345 14.3734 11.9944 14.2553 12.1127C14.1371 12.2309 13.9773 12.2979 13.8101 12.2993H2.34541C2.17792 12.2991 2.01736 12.2325 1.89899 12.114C1.78062 11.9955 1.71413 11.8348 1.71413 11.6674V11.0265H13.1687V3.58109L8.07777 8.16291L1.71413 2.43564V1.48109C1.71413 1.31232 1.78118 1.15045 1.90052 1.03111C2.01986 0.911772 2.18172 0.844727 2.3505 0.844727H13.805C13.9738 0.844727 14.1357 0.911772 14.255 1.03111C14.3744 1.15045 14.4414 1.31232 14.4414 1.48109V11.6674ZM3.26304 2.11745L8.07777 6.45109L12.8925 2.11745H3.26304ZM0.441406 8.48109H5.53232V9.75382H0.441406V8.48109ZM0.441406 5.29927H3.62322V6.572H0.441406V5.29927Z" fill="white" />
-                                    </svg>
-                                    <input type="email" placeholder="{% trans "Enter your email" %}" required>
-                                </div>
-                                <button type="submit" class="echo-footer-area-subscribe-button">{% trans "subscribe" %}</button>
-                                <p class="desc">{% trans "By subscribing, you accepted the our" %} <a href="#">{% trans "Policy" %}</a></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-main">
-                <div class="footer-main-inner">
-                    <div class="logo-area">
-                        <a href="index.html"><img src="{% static 'assets/images/home-1/site-logo/site-logo5-w.html" alt="logo"></a>
-                    </div>
-                    <ul class="social-area">
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    </ul>
-                    <ul class="footer-menu-area">
-                        <li class="menu-item"><a href="index.html">{% trans "Home" %}</a></li>
-                        <li class="menu-item"><a href="#">{% trans "Game" %}</a></li>
-                        <li class="menu-item"><a href="#">{% trans "VR Game" %}</a></li>
-                        <li class="menu-item"><a href="#">{% trans "AR Game" %}</a></li>
-                        <li class="menu-item"><a href="#">{% trans "Mobile Game" %}</a></li>
-                        <li class="menu-item"><a href="#">{% trans "E-Sports" %}</a></li>
-                        <li class="menu-item"><a href="contact.html">{% trans "Contact Us" %}</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-copyright-area">
-                <div class="copyright-area-inner">
-                    <h5 class="title">© Copyright <script>document.write(new Date().getFullYear());</script> by Echo</h5>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer Area -->
-    <!-- End Footer Area -->
-
-    <!-- Start Scricpt Area -->
 
     <!--scroll top button-->
     <button class="scroll-top-btn">
