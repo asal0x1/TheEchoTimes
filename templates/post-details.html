@@ -5,6 +5,7 @@
 <!-- Mirrored from html.themewant.com/echo/post-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2026 10:53:19 GMT -->
 <head>
     {% load static %}
+    {% load i18n %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,24 +31,7 @@
                     <div class="row align-items-center plr_md--30">
                         <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                             <div class="echo-meta-total-jobs">
-                                <div class="echo-meta-jobs-icons">
-                                    <img src="{% static 'assets/images/home-1/header-top/home-1-header-top.png' %}" alt="Echo">
-                                </div>
-                                <div class="echo-meta-jobs-text">
-                                    <div class="swiper rt-treding-slider10">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <span>Meta to cut 10,000 jobs in second...</span>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <span>Elevating Your Office Attire...</span>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <span>Beauty and Wellness Secrets...</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
@@ -57,18 +41,11 @@
                                     <span id="echo-day" class="echo-home-day"></span>
                                     <span id="echo-date"></span>
                                 </div>
-                                <div class="echo-date-time">
-                                    <span><i class="fa-regular "></i></span>
-
-                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-5 col-4 position-relative">
                             <div class="echo-header-top-subs-social-menu">
                                 <div class="echo-header-top-subs-social">
-                                    <div class="echo-subscribe home-2-menu-after echo-header-top-subscribe-btn">
-                                        <a href="javascript:void(0)" class="echo-py-btn" onclick="document.getElementById('id01').style.display='inline'"><i class="fa-regular fa-envelope"></i> Subscribe</a>
-                                    </div>
                                     <div class="echo-header-top-social-media">
                                         <div class="rts-darkmode">
                                             <a id="rts-data-toggle" class="rts-dark-light">
@@ -76,29 +53,6 @@
                                                 <i class="rts-go-light far fa-sun"></i>
                                             </a>
                                         </div>
-                                        <a href="#" id="search" class="echo-header-top-search-btn search-icon action-item icon">
-                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.11556 16.431C13.3485 16.431 16.78 12.9996 16.78 8.76665C16.78 4.53373 13.3485 1.10226 9.11556 1.10226C4.88264 1.10226 1.45117 4.53373 1.45117 8.76665C1.45117 12.9996 4.88264 16.431 9.11556 16.431Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M14.4463 14.4954L17.4512 17.4925" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
-                                        <div class="search-input-area">
-                                            <div class="container">
-                                                <div class="search-input-inner">
-                                                    <div class="input-div">
-                                                        <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
-                                                    </div>
-                                                    <div class="search-close-icon"><i class="fa-regular fa-xmark-large rt-xmark"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="echo-header-top-menu-bar menu-btn">
-                                        <a href="javascript:void(0)">
-                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
-                                            </svg>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +77,7 @@
                                 <div class="echo-home-1-menu">
                                     <ul class="list-unstyled echo-desktop-menu">
 <!--                                        <li class="menu-item echo-has-dropdown">-->
-                                            <a href="{% url 'home' %}" class="echo-dropdown-main-element active">Home</a>
+                                            <a href="{% url 'home' %}" class="echo-dropdown-main-element active">{% trans "Home" %}</a>
                                             <!-- Start Dropdown Menu -->
 <!--                                            <ul class="echo-submenu list-unstyled menu-home">-->
 <!--                                                <li class="nav-item"><a href="index.html">Home 01 - Main</a></li>-->
@@ -139,24 +93,15 @@
 <!--                                            </ul>-->
                                             <!-- End Dropdown Menu -->
 <!--                                        </li>-->
-                                        <li class="menu-item echo-has-dropdown">
-                                            <a href="#" class="echo-dropdown-main-element">Pages</a>
-                                            <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="about.html">About</a></li>
-                                                <li class="nav-item"><a href="author.html">Author</a></li>
-                                                <li class="nav-item"><a href="team.html">Team</a></li>
-                                                <li class="nav-item"><a href="404.html">Error Page</a></li>
-                                            </ul>
-                                        </li>
+
                                          <li class="menu-item echo-has-dropdown">
-                                            <a href="{% url 'category_view' %}" class="echo-dropdown-main-element">Category</a>
+                                            <a href="#" class="echo-dropdown-main-element">{% trans "Category" %}</a>
                                             <ul class="echo-submenu list-unstyled menu-pages">
-                                                <li class="nav-item"><a href="{% url 'technology' %}">Technology</a></li>
-                                                <li class="nav-item"><a href="{% url 'sports' %}">Sports</a></li>
-                                                <li class="nav-item"><a href="{% url 'politics' %}">Politics</a></li>
-                                                <li class="nav-item"><a href="{% url 'fashion' %}">Fashion</a></li>
-                                                <li class="nav-item"><a href="{% url 'gaming' %}">Gaming</a></li>
-                                                <li class="nav-item"><a href="{% url 'foods' %}">Food</a></li>
+                                                <li class="nav-item"><a href="{% url 'technology' %}">{% trans "Technology" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'sports' %}">{% trans "Sports" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'politics' %}">{% trans "Politics" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'fashion' %}">{% trans "Fashion" %}</a></li>
+                                                <li class="nav-item"><a href="{% url 'gaming' %}">{% trans "Gaming" %}</a></li>
                                             </ul>
                                         </li>
 
@@ -173,13 +118,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div class="echo-header-top-menu-bar menu-btn">
-                                    <a href="javascript:void(0)">
-                                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
-                                        </svg>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,14 +169,14 @@
                                 <div class="newsletter-image">
                                     <img src="{% static 'assets/images/home-1/feature-right/news-item-1.png' %}" alt="">
                                 </div>
-                                <h3 class="title">Get Newsletter</h3>
-                                <p class="desc">Notification products, updates</p>
+                                <h3 class="title">{% trans "Get Newsletter" %}</h3>
+                                <p class="desc">{% trans "Notification products, updates" %}</p>
                             </div>
                             <form action="#">
                                 <div class="input-div">
-                                    <input type="email" placeholder="Your email..." required>
+                                    <input type="email" placeholder="{% trans 'Your email...' %}" required>
                                 </div>
-                                <button type="submit" class="subscribe-btn">Subscribe Now</button>
+                                <button type="submit" class="subscribe-btn">{% trans "Subscribe Now" %}</button>
                             </form>
                         </div>
                     </div>
@@ -250,7 +188,7 @@
             <nav class="nav-main mainmenu-nav mt--30">
                 <ul class="mainmenu" id="mobile-menu-active">
                     <li class="has-droupdown">
-                        <a href="#" class="main">Home</a>
+                        <a href="#" class="main">{% trans "Home" %}</a>
                         <ul class="submenu">
                             <li><a class="mobile-menu-link" href="index.html">Home 01 - Main</a></li>
                             <li><a class="mobile-menu-link" href="fashion.html">Home 02 - Fashion</a></li>
@@ -264,9 +202,9 @@
                             <li><a class="mobile-menu-link" href="index-ten.html">Home 10 - Photography</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item"><a class="main mobile-menu-link" href="about.html">About</a></li>
+                    <li class="menu-item"><a class="main mobile-menu-link" href="about.html">{% trans "About" %}</a></li>
                     <li class="has-droupdown">
-                        <a href="#" class="main">Category</a>
+                        <a href="#" class="main">{% trans "Category" %}</a>
                         <ul class="submenu">
                             <li><a class="mobile-menu-link" href="category-style-1.html">Category Style 1</a></li>
                             <li><a class="mobile-menu-link" href="category-style-2.html">Category Style 2</a></li>
@@ -276,9 +214,9 @@
                     <li class="has-droupdown">
                         <a href="#" class="main">Features</a>
                         <ul class="submenu">
-                            <li><a class="mobile-menu-link" href="author.html">Author</a></li>
-                            <li><a class="mobile-menu-link" href="team.html">Team</a></li>
-                            <li><a class="mobile-menu-link" href="404.html">Error Page</a></li>
+                            <li><a class="mobile-menu-link" href="author.html">{% trans "Author" %}</a></li>
+                            <li><a class="mobile-menu-link" href="team.html">{% trans "Team" %}</a></li>
+                            <li><a class="mobile-menu-link" href="404.html">{% trans "Error Page" %}</a></li>
                         </ul>
                     </li>
                     <li class="has-droupdown">
@@ -338,17 +276,17 @@
                     </div>
                     <div class="form">
                         <div class="echo-p-sub-heading">
-                            <p>Weekly Updates</p>
+                            <p>{% trans "Weekly Updates" %}</p>
                         </div>
                         <div class="echo-p-sub-heading">
-                            <h3>Let's join our newsletter!</h3>
+                            <h3>{% trans "Let's join our newsletter!" %}</h3>
                         </div>
                         <form method="POST">
-                            <input type="email" required placeholder="Enter Your Email..">
-                            <button type="submit">Submit</button>
+                            <input type="email" required placeholder="{% trans 'Enter Your Email..' %}">
+                            <button type="submit">{% trans "Submit" %}</button>
                         </form>
                         <div class="echo-bottom-popup">
-                            <p>Do not worry we don't spam!</p>
+                            <p>{% trans "Do not worry we don't spam!" %}</p>
                         </div>
                     </div>
                 </div>
@@ -368,7 +306,7 @@
                     <div class="breadcrumb-inner text-center">
                         <div class="meta">
                             <a href="#" class="prev">ECHO /</a>
-                            <a href="#" class="next">Single News</a>
+                            <a href="#" class="next">{% trans "Single News" %}</a>
                         </div>
                         <h1 class="title">{{ post.category }}</h1>
                     </div>
@@ -402,9 +340,7 @@
                                     <div class="echo-hero-area-like-read-comment-share">
                                         <a href="#"><i class="fa-light fa-comment-dots"></i>{{ comments.count }}</a>
                                     </div>
-                                    <div class="echo-hero-area-like-read-comment-share">
-                                        <a href="#"><i class="fa-light fa-arrow-up-from-bracket"></i> 1.5k Share</a>
-                                    </div>
+
                                 </div>
                                 <p class="echo-hero-discription">{{ post.short_description }}.
                                 </p>
@@ -442,7 +378,7 @@
                                     <div class="row  align-items-center">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="details-tag">
-                                                <h6>Tags:</h6>
+                                                <h6>{% trans "Tags:" %}</h6>
                                                 {% for t in post.tags.all %}
                                                 <button>{{ t }}</button>
 
@@ -450,15 +386,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="details-share">
-                                                <h6>Share:</h6>
-                                                <button><i class="fab fa-facebook-f"></i></button>
-                                                <button><i class="fab fa-twitter"></i></button>
-                                                <button><i class="fab fa-instagram"></i></button>
-                                                <button><i class="fab fa-linkedin-in"></i></button>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +405,7 @@
                             </div>
 
                             <div class="echo-reply-area">
-                                <h5 class="title">Comments</h5>
+                                <h5 class="title">{% trans "Comments" %}</h5>
                                 <ul class="comment-inner">
 
                                     {% for c in comments|slice:":3" %}
@@ -490,10 +418,9 @@
                                             <a href="#" class="pe-none">{{ c.created_at|date:"M d, Y" }}</a>
                                             <p class="desc">{{ c.content }}</p>
                                         </div>
-                                        <div class="reply"><i class="fa-regular fa-share"></i> Reply</div>
                                     </li>
                                     {% empty %}
-                                        <p>No comments yet. Be the first!</p>
+                                        <p>{% trans "No comments yet. Be the first!" %}</p>
                                     {% endfor %}
 
                                 </ul>
@@ -510,19 +437,19 @@
 <!--                                <p>{{ comment.content }}</p>-->
 <!--                              </div>-->
 <!--                              {% empty %}-->
-<!--                                <p>No comments yet. Be the first!</p>-->
+<!--                                <p>{% trans "No comments yet. Be the first!" %}</p>-->
 <!--                              {% endfor %}-->
 
                               <!-- Comment form -->
                               {% if user.is_authenticated %}
-                              <h4>Leave a Comment</h4>
+                              <h4>{% trans "Leave a Comment" %}</h4>
                               <form method="POST">
                                 {% csrf_token %}
                                 {{ form.as_p }}
-                                <button type="submit">Post Comment</button>
+                                <button type="submit">{% trans "Post Comment" %}</button>
                               </form>
                               {% else %}
-                                <p><a href="{% url 'login' %}">Log in</a> to leave a comment.</p>
+                                <p><a href="{% url 'login' %}">{% trans "Log in" %}</a> {% trans "to leave a comment." %}</p>
                               {% endif %}
                             </section>
 <!--                            <div class="echo-comment-box">-->
@@ -556,7 +483,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="echo-home-2-main-title">
-                                                    <h5 class="text-capitalize text-center">Popular Categories</h5>
+                                                    <h5 class="text-capitalize text-center">{% trans "Popular Categories" %}</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -584,7 +511,7 @@
                                     </div>
                                 </div>
                                 <div class="echo-home-1-hero-area-top-story">
-                                    <h5 class="text-center">Top Story</h5>
+                                    <h5 class="text-center">{% trans "Top Story" %}</h5>
                                     {% for ms in most_seen|slice:":4" %}
                                     {% if ms != post %}
                                     <div class="echo-top-story">
@@ -599,48 +526,8 @@
                                     {% endif %}
                                     {% endfor %}
                                 </div>
-                                <div class="echo-feature-area-right-site-follower">
-                                    <div class="echo-home-2-title">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="echo-home-2-main-title">
-                                                    <h5 class="text-capitalize text-center">Follow Us</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#"><i class="fa-brands fa-facebook"></i>20K Fans</a></li>
-                                        <li><a href="#"><i class="fa-brands fa-twitter"></i>10K Followers</a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i>50K Followers</a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>30K Followers</a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest"></i>30K Followers</a></li>
-                                        <li><a href="#"><i class="fa-brands fa-youtube"></i>04K Subscriber</a></li>
-                                    </ul>
-                                </div>
-                                <div class="echo-feature-area-right-site-newsletter">
-                                    <div class="echo-feature-area-rigth-site-newsletter-title">
-                                        <h4>Newsletter</h4>
-                                    </div>
-                                    <div class="echo-feature-area-right-site-newsletter-img">
-                                        <img src="{% static 'assets/images/home-1/feature-right/news-item-1.png' %}" alt="Echo">
-                                    </div>
-                                    <div class="echo-feature-area-right-site-sub-title">
-                                        <p>Stay Tuned With Updates</p>
-                                    </div>
-                                    <div class="echo-feature-area-right-site-news-subscribe">
-                                        <form action="https://html.themewant.com/echo/POST">
-                                            <div class="echo-feature-area-right-site-input-box">
-                                                <input type="email" placeholder="Email Addresss.." required>
-                                                <button type="submit"><i class="fa-regular fa-arrow-right"></i></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
                                 <div class="echo-ct-1-add">
-                                    <div class="echo-ct-add-img">
-                                        <a href="#"><img src="{% static 'assets/images/category-style-1/item-10.html" alt="Echo"></a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -651,114 +538,6 @@
     </section>
     <!-- Start Footer Area -->
     <!-- Start Footer Area -->
-    <footer class="echo-footer-area" id="footer">
-        <div class="container">
-            <div class="echo-row">
-                <div class="echo-footer-content-1">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">Get In Touch</h4>
-                    </div>
-                    <div class="echo-footer-address">
-                        <span class="text-capitalize"><i class="fa-regular fa-map"></i> 255 Sheet, New Avanew, NY</span>
-                        <span class="text-capitalize"><i class="fa-regular fa-phone"></i> (00) 236 123 456 88</span>
-                        <span class="text-capitalize"><i class="fa-sharp fa-regular fa-envelope"></i>
-                            info@demomail.com</span>
-                        <div class="echo-footer-social-media">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="echo-footer-content-2">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">Most Popular</h4>
-                    </div>
-                    <div class="echo-footer-most-popular">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Life Style</a></li>
-                            <li><a href="#">Word</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Politics</a></li>
-                            <li><a href="#">Travels</a></li>
-                            <li><a href="#">Tech</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Video</a></li>
-                            <li><a href="#">Game</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="echo-footer-content-3">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">Help</h4>
-                    </div>
-                    <div class="echo-footer-help">
-                        <ul class="list-unstyled">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="#">Media Kit</a></li>
-                            <li><a href="#">Advertise</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="echo-footer-content-4">
-                    <div class="echo-get-in-tuch">
-                        <h4 class="text-capitalize">Newsletter</h4>
-                    </div>
-                    <div class="echo-footer-news-text">
-                        <p>Register now to get latest updates on promotion & coupons.</p>
-                    </div>
-                    <div class="echo-subscribe-box-button">
-                        <form action="https://html.themewant.com/echo/POST">
-                            <div class="echo-subscribe-input-fill">
-                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.8" d="M14.4414 11.6674C14.4402 11.8345 14.3734 11.9944 14.2553 12.1127C14.1371 12.2309 13.9773 12.2979 13.8101 12.2993H2.34541C2.17792 12.2991 2.01736 12.2325 1.89899 12.114C1.78062 11.9955 1.71413 11.8348 1.71413 11.6674V11.0265H13.1687V3.58109L8.07777 8.16291L1.71413 2.43564V1.48109C1.71413 1.31232 1.78118 1.15045 1.90052 1.03111C2.01986 0.911772 2.18172 0.844727 2.3505 0.844727H13.805C13.9738 0.844727 14.1357 0.911772 14.255 1.03111C14.3744 1.15045 14.4414 1.31232 14.4414 1.48109V11.6674ZM3.26304 2.11745L8.07777 6.45109L12.8925 2.11745H3.26304ZM0.441406 8.48109H5.53232V9.75382H0.441406V8.48109ZM0.441406 5.29927H3.62322V6.572H0.441406V5.29927Z" fill="white" />
-                                </svg>
-                                <input type="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="echo-footer-area-subscribe-button">
-                                <a href="#" class="echo-py-btn-border text-capitalize">subscribe</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="echo-footer-copyright-area">
-                <div class="copyright-area-inner">
-                    <div class="footer-logo"><a href="index.html"><img src="{% static 'assets/images/home-1/site-logo/footer-logo-1.svg' %}" alt="logo"></a></div>
-                    <div class="copyright-content">
-                        <h5 class="title">© Copyright <script>document.write(new Date().getFullYear());</script> by Echo</h5>
-                    </div>
-                    <div class="select-area">
-                        <select name="lang" id="lang">
-                            <option value="english">English</option>
-                            <option value="bengali">Bengali</option>
-                            <option value="arabic">Arabic</option>
-                            <option value="hindi">Hindi</option>
-                            <option value="urdu">Urdu</option>
-                            <option value="french">French</option>
-                            <option value="tamil">Tamil</option>
-                            <option value="marathi">Marathi</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <!-- End Footer Area -->
     <!-- End Footer Area -->
 
